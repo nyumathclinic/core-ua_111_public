@@ -1,28 +1,18 @@
 # NYU CORE-UA 111 From Data to Discovery
 # Public course materials
 
+# WARNING! YML is picky about white space.
+# Four space indentation before "-" will cause and error.
+
 - file: landing_page
-#numbered: false
-
-part: references
+    
+# Chapters in this part will not be numbered
+- part: references
   chapters:
-#     - file: r_commands
-    - file: outside_sources
-
-# part: exercises
+#  - file: r_commands
+  - file: outside_sources
+  
+#- part: exercises
 #   chapters:
 # #    - file: lesson06
 #     - files: lesson06_solutions 
-    
-# # Chapters in this part will not be numbered
-# - part: Introduction
-#   chapters:
-#   - file: page2
-
-# # Chapters in this part will be numbered
-# - part: Part 1
-#   numbered: true
-#   chapters:
-#   - file: chapter1
-#   - file: chapter2
-
