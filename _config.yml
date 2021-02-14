@@ -1,0 +1,16 @@
+# NYU CORE-UA 111 From Data to Discovery 
+# public course materials
+# intended to be used as a reference by the students
+
+# Book properties
+title: From Data to Discovery
+author: Corrin Clarkson
+#repository:
+#  url: "https://github.com/nyumathclinic/core-ua_111_public"
+
+# Build configuration
+only_build_toc_files: true
+
+## Buttons
+html:
+  use_repository_button: false

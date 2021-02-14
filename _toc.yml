@@ -1,0 +1,28 @@
+# NYU CORE-UA 111 From Data to Discovery
+# Public course materials
+
+- file: landing_page
+#numbered: false
+
+# part: references
+#   chapters:
+#     - file: r_commands
+#     - file: outside_sources
+
+# part: exercises
+#   chapters:
+# #    - file: lesson06
+#     - files: lesson06_solutions 
+    
+# # Chapters in this part will not be numbered
+# - part: Introduction
+#   chapters:
+#   - file: page2
+
+# # Chapters in this part will be numbered
+# - part: Part 1
+#   numbered: true
+#   chapters:
+#   - file: chapter1
+#   - file: chapter2
+
