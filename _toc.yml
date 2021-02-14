@@ -14,5 +14,8 @@
   
 - part: Exercises
   chapters:
-#    - file: lesson06
+  - file: lesson02_solutions
+  - file: lesson03_solutions
+  - file: lesson04_solutions
+  - file: lesson05_solutions
   - file: lesson06_solutions

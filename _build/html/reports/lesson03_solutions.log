@@ -17,25 +17,12 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply['content'])
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-# Import the dog licence data
-nyc_trees <- read.csv( '~/shared/data/NYC_Tree_Census_small.csv' ) # import the data
-
-# load the dplyr package.
-# The warn.conflicts=FALSE option supressess the warning about objects are masked from other libraries.
-library(dplyr, warn.conflicts=FALSE) 
-
-# 
-nyc_trees <- group_by(nyc_trees, health)
-summarize(nyc_trees, Count = n()) 
+my_vect # undefined variable
 ------------------
 
-Error in file(file, "rt"): cannot open the connection
+Error in eval(expr, envir, enclos): object 'my_vect' not found
 Traceback:
 
-1. read.csv("~/shared/data/NYC_Tree_Census_small.csv")
-2. read.table(file = file, header = header, sep = sep, quote = quote, 
- .     dec = dec, fill = fill, comment.char = comment.char, ...)
-3. file(file, "rt")
-ERROR: Error in file(file, "rt"): cannot open the connection
+ERROR: Error in eval(expr, envir, enclos): object 'my_vect' not found
 
 

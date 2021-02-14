@@ -17,22 +17,17 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply['content'])
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-# Import the dog licence data
-nyc_trees <- read.csv( '~/shared/data/NYC_Tree_Census_small.csv' ) # import the data
+nyc_dogs <- read.csv('~/shared/data/NYC_Dog_Licensing.csv')  # add the final name and path in quotes
+library('dplyr') # load the dplyr package
 
-# load the dplyr package.
-# The warn.conflicts=FALSE option supressess the warning about objects are masked from other libraries.
-library(dplyr, warn.conflicts=FALSE) 
-
-# 
-nyc_trees <- group_by(nyc_trees, health)
-summarize(nyc_trees, Count = n()) 
+nyc_dogs <- mutate(nyc_dogs, Age = 2021 - AnimalBirthYear) # age is approximately current_year - birth_year
+head(nyc_dogs) # view the results
 ------------------
 
 Error in file(file, "rt"): cannot open the connection
 Traceback:
 
-1. read.csv("~/shared/data/NYC_Tree_Census_small.csv")
+1. read.csv("~/shared/data/NYC_Dog_Licensing.csv")
 2. read.table(file = file, header = header, sep = sep, quote = quote, 
  .     dec = dec, fill = fill, comment.char = comment.char, ...)
 3. file(file, "rt")

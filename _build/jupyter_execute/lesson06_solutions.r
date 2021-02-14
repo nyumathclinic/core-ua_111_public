@@ -1,9 +1,15 @@
-library('dplyr') # load the dplyr package
+# Import the dog licence data
 nyc_trees <- read.csv( '~/shared/data/NYC_Tree_Census_small.csv' ) # import the data
+
+# load the dplyr package.
+# The warn.conflicts=FALSE option supressess the warning about objects are masked from other libraries.
+library(dplyr, warn.conflicts=FALSE) 
+
+# 
 nyc_trees <- group_by(nyc_trees, health)
 summarize(nyc_trees, Count = n()) 
 
-library('ggplot2')
+library(ggplot2)
 
 ?ggplot # view documentation
 

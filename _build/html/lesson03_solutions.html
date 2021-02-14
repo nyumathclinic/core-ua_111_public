@@ -1,0 +1,969 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson 3 Working with Data &#8212; From Data to Discovery</title>
+    
+  <link rel="stylesheet" href="_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Lesson 4 Solutions" href="lesson04_solutions.html" />
+    <link rel="prev" title="Lesson 2: Solutions" href="lesson02_solutions.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">From Data to Discovery</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="landing_page.html">
+   From Data to Discovery
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  References
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="outside_sources.html">
+   Other References
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Exercises
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="lesson02_solutions.html">
+   Lesson 2: Solutions
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Lesson 3 Working with Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lesson04_solutions.html">
+   Lesson 4 Solutions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lesson05_solutions.html">
+   Lesson 5 -  Solutions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lesson06_solutions.html">
+   Lesson 06 -  Data Visualization
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/lesson03_solutions.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/lesson03_solutions.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#useful-links">
+   Useful links
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#class-notes">
+     Class notes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#poll-everywhere">
+     Poll Everywhere
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#part-1-lists">
+   Part 1: Lists
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-0-access-notebook-and-copy-it">
+     Exercise 0 - Access notebook and copy it
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-1-review-of-lists">
+     Exercise 1 - Review of lists
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-2-ice-cream-sale">
+     Exercise 2 - Ice cream sale!!!
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercises-3-more-ice-cream">
+     Exercises 3- More ice cream
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#part-2-old-faithful">
+   Part 2: Old faithful
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-4-old-failthful">
+     Exercise 4 - Old Failthful
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-5-the-last-observation">
+     Exercise 5 - The last observation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-6-change-the-units">
+     Exercise 6 - Change the units
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#part-3-uc-berkeley">
+   Part 3: UC Berkeley
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-7-load-berkeley-addmissions-data">
+     Exercise 7 - Load Berkeley addmissions data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-8-admissons-rates">
+     Exercise 8 - Admissons rates
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#examples">
+   Examples
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-1-variables-and-list-fucntions">
+     Example 1 - Variables and list fucntions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-2-airquality">
+     Example 2 - Airquality
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-3-change-the-units">
+     Example 3 - Change the units
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="lesson-3-working-with-data">
+<h1>Lesson 3 Working with Data<a class="headerlink" href="#lesson-3-working-with-data" title="Permalink to this headline">¶</a></h1>
+<p>These exercises are to help you check your understanding during class. They will not be collected.</p>
+<div class="section" id="useful-links">
+<h2>Useful links<a class="headerlink" href="#useful-links" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="class-notes">
+<h3>Class notes<a class="headerlink" href="#class-notes" title="Permalink to this headline">¶</a></h3>
+<p>Link on NYU Classes or<br>
+Tiny URL:</p>
+</div>
+<div class="section" id="poll-everywhere">
+<h3>Poll Everywhere<a class="headerlink" href="#poll-everywhere" title="Permalink to this headline">¶</a></h3>
+<p>The following links are also on NYU Classes<br>
+Login: https://www.polleverywhere.com/auth/saml/nyu_main<br>
+Respond: https://pollev.com/clarkson<br></p>
+</div>
+</div>
+<div class="section" id="part-1-lists">
+<h2>Part 1: Lists<a class="headerlink" href="#part-1-lists" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="exercise-0-access-notebook-and-copy-it">
+<h3>Exercise 0 - Access notebook and copy it<a class="headerlink" href="#exercise-0-access-notebook-and-copy-it" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Login to the JupyterHub: <a class="reference external" href="https://coreua-111001-fall.rcnyu.org/">https://coreua-111001-spring.rcnyu.org/</a></p></li>
+<li><p>Nacigate to <strong>/shared/class_notebooks</strong> and open lesson03.jpynb</p></li>
+<li><p>Save your own copy of this notebook by using the menu opetion File &gt; Save As. In the name field, write lesson03 and then press Save.</p></li>
+<li><p>Now, <strong>refresh the page</strong>. The red icon in the upper right should no longer be visible.</p></li>
+</ul>
+</div>
+<div class="section" id="exercise-1-review-of-lists">
+<h3>Exercise 1 - Review of lists<a class="headerlink" href="#exercise-1-review-of-lists" title="Permalink to this headline">¶</a></h3>
+<p>Last class, we learned to make lists using both c() and number : number. We also learned to do perform arithemtic with lists.</p>
+<p>Without using Copy &amp; Paste create a list whose entries are the following numbers:
+10 15 20 25 30 35 40 45 50 55.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="m">2</span><span class="o">:</span><span class="m">11</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>2</li><li>3</li><li>4</li><li>5</li><li>6</li><li>7</li><li>8</li><li>9</li><li>10</li><li>11</li></ol>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="m">2</span><span class="o">:</span><span class="m">11</span><span class="o">*</span><span class="m">5</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>10</li><li>15</li><li>20</li><li>25</li><li>30</li><li>35</li><li>40</li><li>45</li><li>50</li><li>55</li></ol>
+</div></div>
+</div>
+</div>
+<div class="section" id="exercise-2-ice-cream-sale">
+<h3>Exercise 2 - Ice cream sale!!!<a class="headerlink" href="#exercise-2-ice-cream-sale" title="Permalink to this headline">¶</a></h3>
+<p>An icecream truck sells many different types of ice cream. The prices of each type of ice cream are stored in a list called <code class="docutils literal notranslate"><span class="pre">ice_cream_prices</span></code>in the code cell below. Today the icecream is on sale! The amount that each item is discounted is stored in the list called <code class="docutils literal notranslate"><span class="pre">discounts</span></code>. The order of the discounts corresponds to the order of the prices.</p>
+<p>Create a new list with the sale prices of each item and store the list in a variable called <code class="docutils literal notranslate"><span class="pre">sale_prices</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">ice_cream_prices</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="m">1.25</span><span class="p">,</span> <span class="m">3</span><span class="p">,</span> <span class="m">5.99</span><span class="p">,</span> <span class="m">1.75</span><span class="p">,</span> <span class="m">6.75</span><span class="p">,</span> <span class="m">4.99</span><span class="p">,</span> <span class="m">7.09</span><span class="p">,</span> <span class="m">3.55</span><span class="p">,</span> <span class="m">2</span><span class="p">)</span>
+<span class="n">discounts</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="m">0.25</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">0.50</span><span class="p">,</span> <span class="m">0.5</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="m">0.25</span><span class="p">,</span> <span class="m">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">my_vect</span> <span class="c1"># undefined variable</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="n">Error</span> <span class="ow">in</span> <span class="nb">eval</span><span class="p">(</span><span class="n">expr</span><span class="p">,</span> <span class="n">envir</span><span class="p">,</span> <span class="n">enclos</span><span class="p">):</span> <span class="nb">object</span> <span class="s1">&#39;my_vect&#39;</span> <span class="ow">not</span> <span class="n">found</span>
+<span class="ne">Traceback</span>:
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># Recall that the pound sign is used for comments</span>
+
+<span class="n">sale_prices</span> <span class="o">&lt;-</span> <span class="n">ice_cream_prices</span> <span class="o">-</span> <span class="n">discounts</span> <span class="c1"># This line creates the list and stores it.</span>
+<span class="n">sale_prices</span> <span class="c1"># This line is what causes R to output the list.</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><ol class=list-inline>
+	<li>1</li>
+	<li>2</li>
+	<li>5.49</li>
+	<li>1.25</li>
+	<li>5.75</li>
+	<li>4.99</li>
+	<li>6.09</li>
+	<li>3.3</li>
+	<li>2</li>
+</ol>
+</div></div>
+</div>
+</div>
+<div class="section" id="exercises-3-more-ice-cream">
+<h3>Exercises 3- More ice cream<a class="headerlink" href="#exercises-3-more-ice-cream" title="Permalink to this headline">¶</a></h3>
+<p>Use <code class="docutils literal notranslate"><span class="pre">sale_prices</span></code> from excercise 2 and R functions to determine the ansers to the following questions:</p>
+<ul class="simple">
+<li><p>How many types of ice cream does the truck sell?</p></li>
+<li><p>What is the cost of the most exspensive frozen treat?</p></li>
+<li><p>What is the cost of the cheapest ice cream option?</p></li>
+<li><p>What is the average cost of an item from the truck rounded to the nearest cent?</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">length</span><span class="p">(</span><span class="n">sale_prices</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">9</div></div>
+</div>
+<p>There are 9 types of ice cream.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">max</span><span class="p">(</span><span class="n">sale_prices</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">6.09</div></div>
+</div>
+<p>The cost of the most exspensive treat is $6.09.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">min</span><span class="p">(</span><span class="n">sale_prices</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">1</div></div>
+</div>
+<p>The cost of the least exspensive treat is $1.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">mean</span><span class="p">(</span><span class="n">sale_prices</span><span class="p">)</span> <span class="c1"># average price</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">3.54111111111111</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">round</span><span class="p">(</span><span class="nf">mean</span><span class="p">(</span><span class="n">sale_prices</span><span class="p">),</span><span class="m">2</span><span class="p">)</span> <span class="c1"># two decimal places</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">3.54</div></div>
+</div>
+<p>The average cost of ice cream is $3.54.</p>
+</div>
+</div>
+<div class="section" id="part-2-old-faithful">
+<h2>Part 2: Old faithful<a class="headerlink" href="#part-2-old-faithful" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="exercise-4-old-failthful">
+<h3>Exercise 4 - Old Failthful<a class="headerlink" href="#exercise-4-old-failthful" title="Permalink to this headline">¶</a></h3>
+<p>One of the data sets in the datasets package is called <code class="docutils literal notranslate"><span class="pre">faithful</span></code>. Use the documentation on this dataset to answer the following question. Wrtie your answer in the markdown cell below.</p>
+<p>Why is there reason to believe that this data includes errors introduced by humans?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="o">?</span><span class="n">faithful</span> <span class="c1"># question mark for documentation</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Eruption times are very often multiples of five.</p>
+</div>
+<div class="section" id="exercise-5-the-last-observation">
+<h3>Exercise 5 - The last observation<a class="headerlink" href="#exercise-5-the-last-observation" title="Permalink to this headline">¶</a></h3>
+<p>How long was the last erruption recorded in the fialthful data set? Write you answer in the markdown cell below. Don’t forget units!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">faithful</span> <span class="c1"># display the whole data frame and scoll to the bottom</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table>
+<thead><tr><th scope=col>eruptions</th><th scope=col>waiting</th></tr></thead>
+<tbody>
+	<tr><td>3.600</td><td>79   </td></tr>
+	<tr><td>1.800</td><td>54   </td></tr>
+	<tr><td>3.333</td><td>74   </td></tr>
+	<tr><td>2.283</td><td>62   </td></tr>
+	<tr><td>4.533</td><td>85   </td></tr>
+	<tr><td>2.883</td><td>55   </td></tr>
+	<tr><td>4.700</td><td>88   </td></tr>
+	<tr><td>3.600</td><td>85   </td></tr>
+	<tr><td>1.950</td><td>51   </td></tr>
+	<tr><td>4.350</td><td>85   </td></tr>
+	<tr><td>1.833</td><td>54   </td></tr>
+	<tr><td>3.917</td><td>84   </td></tr>
+	<tr><td>4.200</td><td>78   </td></tr>
+	<tr><td>1.750</td><td>47   </td></tr>
+	<tr><td>4.700</td><td>83   </td></tr>
+	<tr><td>2.167</td><td>52   </td></tr>
+	<tr><td>1.750</td><td>62   </td></tr>
+	<tr><td>4.800</td><td>84   </td></tr>
+	<tr><td>1.600</td><td>52   </td></tr>
+	<tr><td>4.250</td><td>79   </td></tr>
+	<tr><td>1.800</td><td>51   </td></tr>
+	<tr><td>1.750</td><td>47   </td></tr>
+	<tr><td>3.450</td><td>78   </td></tr>
+	<tr><td>3.067</td><td>69   </td></tr>
+	<tr><td>4.533</td><td>74   </td></tr>
+	<tr><td>3.600</td><td>83   </td></tr>
+	<tr><td>1.967</td><td>55   </td></tr>
+	<tr><td>4.083</td><td>76   </td></tr>
+	<tr><td>3.850</td><td>78   </td></tr>
+	<tr><td>4.433</td><td>79   </td></tr>
+	<tr><td>...</td><td>...</td></tr>
+	<tr><td>4.933</td><td>86   </td></tr>
+	<tr><td>2.900</td><td>63   </td></tr>
+	<tr><td>4.583</td><td>85   </td></tr>
+	<tr><td>3.833</td><td>82   </td></tr>
+	<tr><td>2.083</td><td>57   </td></tr>
+	<tr><td>4.367</td><td>82   </td></tr>
+	<tr><td>2.133</td><td>67   </td></tr>
+	<tr><td>4.350</td><td>74   </td></tr>
+	<tr><td>2.200</td><td>54   </td></tr>
+	<tr><td>4.450</td><td>83   </td></tr>
+	<tr><td>3.567</td><td>73   </td></tr>
+	<tr><td>4.500</td><td>73   </td></tr>
+	<tr><td>4.150</td><td>88   </td></tr>
+	<tr><td>3.817</td><td>80   </td></tr>
+	<tr><td>3.917</td><td>71   </td></tr>
+	<tr><td>4.450</td><td>83   </td></tr>
+	<tr><td>2.000</td><td>56   </td></tr>
+	<tr><td>4.283</td><td>79   </td></tr>
+	<tr><td>4.767</td><td>78   </td></tr>
+	<tr><td>4.533</td><td>84   </td></tr>
+	<tr><td>1.850</td><td>58   </td></tr>
+	<tr><td>4.250</td><td>83   </td></tr>
+	<tr><td>1.983</td><td>43   </td></tr>
+	<tr><td>2.250</td><td>60   </td></tr>
+	<tr><td>4.750</td><td>75   </td></tr>
+	<tr><td>4.117</td><td>81   </td></tr>
+	<tr><td>2.150</td><td>46   </td></tr>
+	<tr><td>4.417</td><td>90   </td></tr>
+	<tr><td>1.817</td><td>46   </td></tr>
+	<tr><td>4.467</td><td>74   </td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<p>The last recorded eruption was 4.467 minutes long.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">dim</span><span class="p">(</span><span class="n">faithful</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><ol class=list-inline>
+	<li>272</li>
+	<li>2</li>
+</ol>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">faithful</span><span class="p">[</span><span class="m">272</span><span class="p">,</span><span class="m">1</span><span class="p">]</span> <span class="c1"># row, column</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">4.467</div></div>
+</div>
+</div>
+<div class="section" id="exercise-6-change-the-units">
+<h3>Exercise 6 - Change the units<a class="headerlink" href="#exercise-6-change-the-units" title="Permalink to this headline">¶</a></h3>
+<p>The faithful data set gives the duration of the erruptions in minutes and fractions of a minute. It would be easer to understad the data if we converted the decimals to seconds. Demonstrate that this could be done by finding the duration of the 13th recorded eruption in therms of minuts and seconds.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">faithful</span><span class="p">[</span><span class="m">13</span><span class="p">,</span><span class="m">1</span><span class="p">]</span> <span class="c1"># 13th row first column</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">4.2</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># We see that the duration is 4.2 minutes. We need to convert 0.2 minutes into seconds</span>
+<span class="m">0.2</span><span class="o">*</span><span class="m">60</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">12</div></div>
+</div>
+<p>The duration is 4 minutes and 12 seconds.</p>
+</div>
+</div>
+<div class="section" id="part-3-uc-berkeley">
+<h2>Part 3: UC Berkeley<a class="headerlink" href="#part-3-uc-berkeley" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="exercise-7-load-berkeley-addmissions-data">
+<h3>Exercise 7 - Load Berkeley addmissions data<a class="headerlink" href="#exercise-7-load-berkeley-addmissions-data" title="Permalink to this headline">¶</a></h3>
+<p>Execute the command in the code cell below to load the Berkeley admisions data. Then varify that it loaded correctly by excuting a command that displays all or part of the data.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">berkeley</span> <span class="o">&lt;-</span> <span class="nf">read.csv</span><span class="p">(</span><span class="s">&#39;~/shared/data/berkeley73.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">berkeley</span> <span class="o">&lt;-</span> <span class="nf">read.csv</span><span class="p">(</span><span class="s">&#39;~/shared/data/berkeley73.csv&#39;</span><span class="p">)</span>
+<span class="n">berkeley</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table>
+<thead><tr><th scope=col>Department</th><th scope=col>Men_Applicants</th><th scope=col>Men_Admitted</th><th scope=col>Women_Applicants</th><th scope=col>Women_Admitted</th></tr></thead>
+<tbody>
+	<tr><td>A  </td><td>825</td><td>512</td><td>108</td><td> 89</td></tr>
+	<tr><td>B  </td><td>560</td><td>353</td><td> 25</td><td> 17</td></tr>
+	<tr><td>C  </td><td>325</td><td>120</td><td>593</td><td>202</td></tr>
+	<tr><td>D  </td><td>417</td><td>138</td><td>375</td><td>131</td></tr>
+	<tr><td>E  </td><td>191</td><td> 53</td><td>393</td><td> 94</td></tr>
+	<tr><td>F  </td><td>373</td><td> 22</td><td>341</td><td> 24</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># Strategy 1</span>
+<span class="n">berkeley</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table>
+<thead><tr><th scope=col>Department</th><th scope=col>Men_Applicants</th><th scope=col>Men_Admitted</th><th scope=col>Women_Applicants</th><th scope=col>Women_Admitted</th></tr></thead>
+<tbody>
+	<tr><td>A  </td><td>825</td><td>512</td><td>108</td><td> 89</td></tr>
+	<tr><td>B  </td><td>560</td><td>353</td><td> 25</td><td> 17</td></tr>
+	<tr><td>C  </td><td>325</td><td>120</td><td>593</td><td>202</td></tr>
+	<tr><td>D  </td><td>417</td><td>138</td><td>375</td><td>131</td></tr>
+	<tr><td>E  </td><td>191</td><td> 53</td><td>393</td><td> 94</td></tr>
+	<tr><td>F  </td><td>373</td><td> 22</td><td>341</td><td> 24</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># Strategy 2</span>
+<span class="nf">head</span><span class="p">(</span><span class="n">berkeley</span><span class="p">,</span><span class="m">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table>
+<thead><tr><th scope=col>Department</th><th scope=col>Men_Applicants</th><th scope=col>Men_Admitted</th><th scope=col>Women_Applicants</th><th scope=col>Women_Admitted</th></tr></thead>
+<tbody>
+	<tr><td>A  </td><td>825</td><td>512</td><td>108</td><td>89 </td></tr>
+	<tr><td>B  </td><td>560</td><td>353</td><td> 25</td><td>17 </td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+</div>
+<div class="section" id="exercise-8-admissons-rates">
+<h3>Exercise 8 - Admissons rates<a class="headerlink" href="#exercise-8-admissons-rates" title="Permalink to this headline">¶</a></h3>
+<p>Add two new columns to the berkeley data frame. One that contains the percentage of men who were admitted by each department and a second that contains the percentage of women that were admitted by each department.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># percent admitted = total admiteed/ total applied * 100</span>
+<span class="n">berkeley</span><span class="o">$</span><span class="n">Per_Men_Admitted</span> <span class="o">&lt;-</span> <span class="n">berkeley</span><span class="o">$</span><span class="n">Men_Admitted</span><span class="o">/</span><span class="n">berkeley</span><span class="o">$</span><span class="n">Men_Applicants</span><span class="o">*</span><span class="m">100</span>
+<span class="n">berkeley</span><span class="o">$</span><span class="n">Per_Women_Admitted</span> <span class="o">&lt;-</span> <span class="n">berkeley</span><span class="o">$</span><span class="n">Women_Admitted</span><span class="o">/</span><span class="n">berkeley</span><span class="o">$</span><span class="n">Women_Applicants</span><span class="o">*</span><span class="m">100</span>
+<span class="n">berkeley</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table>
+<thead><tr><th scope=col>Department</th><th scope=col>Men_Applicants</th><th scope=col>Men_Admitted</th><th scope=col>Women_Applicants</th><th scope=col>Women_Admitted</th><th scope=col>Per_Men_Admitted</th><th scope=col>Per_Women_Admitted</th></tr></thead>
+<tbody>
+	<tr><td>A        </td><td>825      </td><td>512      </td><td>108      </td><td> 89      </td><td>62.060606</td><td>82.407407</td></tr>
+	<tr><td>B        </td><td>560      </td><td>353      </td><td> 25      </td><td> 17      </td><td>63.035714</td><td>68.000000</td></tr>
+	<tr><td>C        </td><td>325      </td><td>120      </td><td>593      </td><td>202      </td><td>36.923077</td><td>34.064081</td></tr>
+	<tr><td>D        </td><td>417      </td><td>138      </td><td>375      </td><td>131      </td><td>33.093525</td><td>34.933333</td></tr>
+	<tr><td>E        </td><td>191      </td><td> 53      </td><td>393      </td><td> 94      </td><td>27.748691</td><td>23.918575</td></tr>
+	<tr><td>F        </td><td>373      </td><td> 22      </td><td>341      </td><td> 24      </td><td> 5.898123</td><td> 7.038123</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+</div>
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">mean</span><span class="p">(</span><span class="m">3</span><span class="o">:</span><span class="m">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">6.5</div></div>
+</div>
+<div class="section" id="example-1-variables-and-list-fucntions">
+<h3>Example 1 - Variables and list fucntions<a class="headerlink" href="#example-1-variables-and-list-fucntions" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="m">5.8</span><span class="p">,</span> <span class="m">3.52</span><span class="p">,</span> <span class="m">7.81</span><span class="p">,</span> <span class="m">0.4</span><span class="p">,</span> <span class="m">4.79</span><span class="p">,</span> <span class="m">3.04</span><span class="p">,</span> <span class="m">4.89</span><span class="p">,</span> <span class="m">5.23</span><span class="p">,</span> <span class="m">2.37</span><span class="p">,</span> <span class="m">4.32</span><span class="p">)</span> <span class="c1"># generated using a random number generator</span>
+<span class="nf">mean</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">4.217</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">max</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">7.81</div></div>
+</div>
+</div>
+<div class="section" id="example-2-airquality">
+<h3>Example 2 - Airquality<a class="headerlink" href="#example-2-airquality" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">help</span> <span class="o">=</span> <span class="s">&quot;datasets&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="o">?</span><span class="n">airquality</span> <span class="c1"># gives the documentation for this BUILT-IN dataset</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">head</span><span class="p">(</span><span class="n">airquality</span><span class="p">,</span><span class="m">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table>
+<thead><tr><th scope=col>Ozone</th><th scope=col>Solar.R</th><th scope=col>Wind</th><th scope=col>Temp</th><th scope=col>Month</th><th scope=col>Day</th></tr></thead>
+<tbody>
+	<tr><td>41  </td><td>190 </td><td> 7.4</td><td>67  </td><td>5   </td><td>1   </td></tr>
+	<tr><td>36  </td><td>118 </td><td> 8.0</td><td>72  </td><td>5   </td><td>2   </td></tr>
+	<tr><td>12  </td><td>149 </td><td>12.6</td><td>74  </td><td>5   </td><td>3   </td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">str</span><span class="p">(</span><span class="n">airquality</span><span class="p">)</span> <span class="c1"># structure function</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;data.frame&#39;:	153 obs. of  6 variables:
+ $ Ozone  : int  41 36 12 18 NA 28 23 19 8 NA ...
+ $ Solar.R: int  190 118 149 313 NA NA 299 99 19 194 ...
+ $ Wind   : num  7.4 8 12.6 11.5 14.3 14.9 8.6 13.8 20.1 8.6 ...
+ $ Temp   : int  67 72 74 62 56 66 65 59 61 69 ...
+ $ Month  : int  5 5 5 5 5 5 5 5 5 5 ...
+ $ Day    : int  1 2 3 4 5 6 7 8 9 10 ...
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">mean</span><span class="p">(</span><span class="n">airquality</span><span class="o">$</span><span class="n">temp</span><span class="p">)</span> <span class="c1"># Note that R is sensitice to campialization</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning message in mean.default(airquality$temp):
+“argument is not numeric or logical: returning NA”
+</pre></div>
+</div>
+<div class="output text_html">&lt;NA&gt;</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">mean</span><span class="p">(</span><span class="n">airquality</span><span class="o">$</span><span class="n">Temp</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">77.8823529411765</div></div>
+</div>
+<p>The average high temperature in NYC from May to Septemerin 1973 was <span class="math notranslate nohighlight">\(77.9^\circ\)</span> F.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">max</span><span class="p">(</span><span class="n">airquality</span><span class="o">$</span><span class="n">Temp</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">97</div></div>
+</div>
+<p>The hottest day was <span class="math notranslate nohighlight">\(97^\circ\)</span> F.</p>
+</div>
+<div class="section" id="example-3-change-the-units">
+<h3>Example 3 - Change the units<a class="headerlink" href="#example-3-change-the-units" title="Permalink to this headline">¶</a></h3>
+<p>We can use the formula below to convert a temperature <span class="math notranslate nohighlight">\(f\)</span> in degrees Fahrenheit to the equivalent temperature <span class="math notranslate nohighlight">\(c\)</span> in degrees Celcius
+$<span class="math notranslate nohighlight">\((f − 32) \cdot \frac{5}{9} = c\)</span>$</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">&lt;-</span> <span class="m">97</span>
+<span class="p">(</span><span class="n">f</span><span class="m">-32</span><span class="p">)</span><span class="o">*</span><span class="m">5</span><span class="o">/</span><span class="m">9</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">36.1111111111111</div></div>
+</div>
+<p>The hottest day was <span class="math notranslate nohighlight">\(36.1^\circ\)</span> C.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">airquality</span><span class="o">$</span><span class="n">Celcius</span> <span class="o">&lt;-</span> <span class="p">(</span><span class="n">airquality</span><span class="o">$</span><span class="n">Temp</span> <span class="o">-</span> <span class="m">32</span><span class="p">)</span><span class="o">*</span><span class="m">5</span><span class="o">/</span><span class="m">9</span>
+<span class="nf">head</span><span class="p">(</span><span class="n">airquality</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table>
+<thead><tr><th scope=col>Ozone</th><th scope=col>Solar.R</th><th scope=col>Wind</th><th scope=col>Temp</th><th scope=col>Month</th><th scope=col>Day</th><th scope=col>Celcius</th></tr></thead>
+<tbody>
+	<tr><td>41      </td><td>190     </td><td> 7.4    </td><td>67      </td><td>5       </td><td>1       </td><td>19.44444</td></tr>
+	<tr><td>36      </td><td>118     </td><td> 8.0    </td><td>72      </td><td>5       </td><td>2       </td><td>22.22222</td></tr>
+	<tr><td>12      </td><td>149     </td><td>12.6    </td><td>74      </td><td>5       </td><td>3       </td><td>23.33333</td></tr>
+	<tr><td>18      </td><td>313     </td><td>11.5    </td><td>62      </td><td>5       </td><td>4       </td><td>16.66667</td></tr>
+	<tr><td>NA      </td><td> NA     </td><td>14.3    </td><td>56      </td><td>5       </td><td>5       </td><td>13.33333</td></tr>
+	<tr><td>28      </td><td> NA     </td><td>14.9    </td><td>66      </td><td>5       </td><td>6       </td><td>18.88889</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "r"
+        },
+        kernelOptions: {
+            kernelName: "ir",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'ir'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="lesson02_solutions.html" title="previous page">Lesson 2: Solutions</a>
+    <a class='right-next' id="next-link" href="lesson04_solutions.html" title="next page">Lesson 4 Solutions</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Corrin Clarkson<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>
