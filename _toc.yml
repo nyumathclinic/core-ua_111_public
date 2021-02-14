@@ -9,7 +9,7 @@
 # Chapters in this part will not be numbered
 - part: References
   chapters:
-#  - file: r_commands
+  - file: r_commands
   - file: outside_sources
   
 - part: Exercises
