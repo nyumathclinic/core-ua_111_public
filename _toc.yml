@@ -4,10 +4,10 @@
 - file: landing_page
 #numbered: false
 
-# part: references
-#   chapters:
+part: references
+  chapters:
 #     - file: r_commands
-#     - file: outside_sources
+    - file: outside_sources
 
 # part: exercises
 #   chapters:
