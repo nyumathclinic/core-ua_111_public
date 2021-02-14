@@ -1,0 +1,969 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson 2: Solutions &#8212; From Data to Discovery</title>
+    
+  <link rel="stylesheet" href="_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Lesson 3 Working with Data" href="lesson03_solutions.html" />
+    <link rel="prev" title="Other References" href="outside_sources.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">From Data to Discovery</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="landing_page.html">
+   From Data to Discovery
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  References
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="outside_sources.html">
+   Other References
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Exercises
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Lesson 2: Solutions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lesson03_solutions.html">
+   Lesson 3 Working with Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lesson04_solutions.html">
+   Lesson 4 Solutions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lesson05_solutions.html">
+   Lesson 5 -  Solutions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lesson06_solutions.html">
+   Lesson 06 -  Data Visualization
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/lesson02_solutions.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/lesson02_solutions.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#part-1-jupyterhub">
+   Part 1: JupyterHub
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-2-create-a-cell-and-compute-a-sum">
+     Exercise 2 - Create a cell and compute a sum
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-3-change-cell-type-and-compute-a-percentage">
+     Exercise 3 - Change cell type  and compute a percentage
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#part-2-compute">
+   Part 2: Compute
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-4-arithmetic">
+     Exercise 4: Arithmetic
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-5-square-root">
+     Exercise 5: Square root
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-6-logarightm">
+     Exercise 6: Logarightm
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#part-3-vectors">
+   Part 3: Vectors
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-7-boroughs">
+     Exercise 7: Boroughs
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-8-odd-numbers">
+     Exercise 8: Odd numbers
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-9-combining-vectors">
+     Exercise 9: Combining vectors
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#examples">
+   Examples
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-1-arithmetic">
+     Example 1: Arithmetic
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-2-mathematical-constants-and-functions">
+     Example 2: Mathematical constants and functions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-3-data-types">
+     Example 3: Data types
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-4-vectors">
+     Example 4: Vectors
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-5-vectors-of-numbers">
+     Example 5: Vectors of numbers
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-6-math-with-one-vector">
+     Example 6: Math with one vector
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-7-math-with-multiple-vectors">
+     Example 7: Math with multiple vectors
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="lesson-2-solutions">
+<h1>Lesson 2: Solutions<a class="headerlink" href="#lesson-2-solutions" title="Permalink to this headline">¶</a></h1>
+<p>These exercises are to help you check your understanding during class. They will not be collected.</p>
+<div class="section" id="part-1-jupyterhub">
+<h2>Part 1: JupyterHub<a class="headerlink" href="#part-1-jupyterhub" title="Permalink to this headline">¶</a></h2>
+<p>Your Name</p>
+<div class="section" id="exercise-2-create-a-cell-and-compute-a-sum">
+<h3>Exercise 2 - Create a cell and compute a sum<a class="headerlink" href="#exercise-2-create-a-cell-and-compute-a-sum" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Insert a cell</p>
+<ul>
+<li><p>Select this cel by clicking it once.</p></li>
+<li><p>Use the menue option Insert &gt; Insert Cell Below to insert a cell below this one.</p></li>
+</ul>
+</li>
+<li><p>Compute a sum</p>
+<ul>
+<li><p>Double click on the new cell to edit it</p></li>
+<li><p>Type 12 + 7 in the new cell</p></li>
+<li><p>Press SHIFT + Enter to exicute.</p></li>
+</ul>
+</li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="m">12+7</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">19</div></div>
+</div>
+</div>
+<div class="section" id="exercise-3-change-cell-type-and-compute-a-percentage">
+<h3>Exercise 3 - Change cell type  and compute a percentage<a class="headerlink" href="#exercise-3-change-cell-type-and-compute-a-percentage" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Change the markdown cell to a code cell</p>
+<ul>
+<li><p>Select the cell by clicking on it on it once</p></li>
+<li><p>use the menu option Cell &gt; Cell Type &gt; Code</p></li>
+</ul>
+</li>
+<li><p>Suppose that out of 60 students, 25 are living in Manhattan, 11 in Brooklyn, 9 in Queens, 9 in the Bronx, 3 in Staten Island, 2 in New Jersey, and 1 in Westchester. Use the cell below to compute the percent of of students who live in Brooklyn.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># Percentage of students in Brooklyn 5 +2</span>
+<span class="m">5+2</span>
+<span class="m">11</span><span class="o">/</span><span class="m">60</span><span class="o">*</span><span class="m">100</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">7</div><div class="output text_html">18.3333333333333</div></div>
+</div>
+<p>18.33% of the students live in Brooklyn.</p>
+</div>
+</div>
+<div class="section" id="part-2-compute">
+<h2>Part 2: Compute<a class="headerlink" href="#part-2-compute" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="exercise-4-arithmetic">
+<h3>Exercise 4: Arithmetic<a class="headerlink" href="#exercise-4-arithmetic" title="Permalink to this headline">¶</a></h3>
+<p>Verify the following equation by using the code cell below to comput the value of the left hand side.
+$<span class="math notranslate nohighlight">\(\frac{3^2 + 4^2}{5} = 5\)</span>$</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="m">3</span><span class="o">^</span><span class="m">2+4</span><span class="o">^</span><span class="m">2</span><span class="p">)</span><span class="o">/</span><span class="m">5</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">5</div></div>
+</div>
+</div>
+<div class="section" id="exercise-5-square-root">
+<h3>Exercise 5: Square root<a class="headerlink" href="#exercise-5-square-root" title="Permalink to this headline">¶</a></h3>
+<p>Verify the following equation by using the code cell below to comput the value of the left hand side.
+$<span class="math notranslate nohighlight">\(\sqrt{\lvert 5^2 - 13^2\rvert} = 12\)</span>$</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">sqrt</span><span class="p">(</span><span class="nf">abs</span><span class="p">(</span><span class="m">5</span><span class="o">^</span><span class="m">2-13</span><span class="o">^</span><span class="m">2</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">12</div></div>
+</div>
+</div>
+<div class="section" id="exercise-6-logarightm">
+<h3>Exercise 6: Logarightm<a class="headerlink" href="#exercise-6-logarightm" title="Permalink to this headline">¶</a></h3>
+<p>Verify the following equation by using the code cell below to comput the value of the left hand side.
+$<span class="math notranslate nohighlight">\(\ln(e^\pi) \approx 3.14159265358979\)</span>$</p>
+<p>Inside the <span class="math notranslate nohighlight">\(\ln\)</span> we have <span class="math notranslate nohighlight">\(e^\pi\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">exp</span><span class="p">(</span><span class="kc">pi</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">23.1406926327793</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">log</span><span class="p">(</span><span class="m">23.1406926327793</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">3.14159265358979</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">log</span><span class="p">(</span><span class="nf">exp</span><span class="p">(</span><span class="kc">pi</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">3.14159265358979</div></div>
+</div>
+</div>
+</div>
+<div class="section" id="part-3-vectors">
+<h2>Part 3: Vectors<a class="headerlink" href="#part-3-vectors" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="exercise-7-boroughs">
+<h3>Exercise 7: Boroughs<a class="headerlink" href="#exercise-7-boroughs" title="Permalink to this headline">¶</a></h3>
+<p>Create a vect0r that contains the names of the five boroughs of New York city:</p>
+<ul class="simple">
+<li><p>Brooklyn</p></li>
+<li><p>Bronx</p></li>
+<li><p>Manhattan</p></li>
+<li><p>Queens</p></li>
+<li><p>Staten Island</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">c</span><span class="p">(</span><span class="s">&#39;Brooklyn&#39;</span><span class="p">,</span> <span class="s">&#39;Bronx&#39;</span><span class="p">,</span> <span class="s">&#39;Manhattan&#39;</span><span class="p">,</span> <span class="s">&#39;Queens&#39;</span><span class="p">,</span> <span class="s">&#39;Staten Island&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>'Brooklyn'</li><li>'Bronx'</li><li>'Manhattan'</li><li>'Queens'</li><li>'Staten Island'</li></ol>
+</div></div>
+</div>
+</div>
+<div class="section" id="exercise-8-odd-numbers">
+<h3>Exercise 8: Odd numbers<a class="headerlink" href="#exercise-8-odd-numbers" title="Permalink to this headline">¶</a></h3>
+<p>Definition: An <em>even</em> number is any number that can be expressed as <span class="math notranslate nohighlight">\(2n\)</span> where <span class="math notranslate nohighlight">\(n\)</span> is an integer.</p>
+<p>Definition: An <em>odd</em> number is any number that can be expressed as <span class="math notranslate nohighlight">\(2n+1\)</span> where <span class="math notranslate nohighlight">\(n\)</span> is an integer.</p>
+<p>In Example 6, we used arithmeic operations on lists to created a list of the even numbers beteen 1 and 20. Use a similar strategy to create a list of the odd numbers between 1 and 20.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">10</span><span class="p">)</span><span class="o">*</span><span class="m">2</span> <span class="o">-</span> <span class="m">1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>1</li><li>3</li><li>5</li><li>7</li><li>9</li><li>11</li><li>13</li><li>15</li><li>17</li><li>19</li></ol>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="m">0</span><span class="o">:</span><span class="m">9</span><span class="p">)</span><span class="o">*</span><span class="m">2</span> <span class="o">+</span> <span class="m">1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>1</li><li>3</li><li>5</li><li>7</li><li>9</li><li>11</li><li>13</li><li>15</li><li>17</li><li>19</li></ol>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">10</span><span class="p">)</span><span class="o">*</span><span class="m">2</span> <span class="m">+1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>3</li><li>5</li><li>7</li><li>9</li><li>11</li><li>13</li><li>15</li><li>17</li><li>19</li><li>21</li></ol>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">)</span><span class="o">*</span><span class="m">2</span> <span class="m">+1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>3</li><li>5</li><li>7</li></ol>
+</div></div>
+</div>
+</div>
+<div class="section" id="exercise-9-combining-vectors">
+<h3>Exercise 9: Combining vectors<a class="headerlink" href="#exercise-9-combining-vectors" title="Permalink to this headline">¶</a></h3>
+<p>The cell below contains two vectors. The first vector contains the predicted high temperature in degrees Fahrenheit in NYC for the next five days. The second vector contains the predicted low temperatures.</p>
+<p>Use vector operations to find the average of the high and the low temerature for each day.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># The pound sybol is used for comments. </span>
+<span class="c1"># R ignores everything in the line after the # symbol.</span>
+
+<span class="c1"># highs </span>
+<span class="nf">c</span><span class="p">(</span><span class="m">35</span><span class="p">,</span> <span class="m">39</span><span class="p">,</span> <span class="m">42</span><span class="p">,</span> <span class="m">36</span><span class="p">,</span> <span class="m">35</span><span class="p">)</span>
+
+<span class="c1"># lows</span>
+<span class="nf">c</span><span class="p">(</span><span class="m">27</span><span class="p">,</span> <span class="m">29</span><span class="p">,</span> <span class="m">37</span><span class="p">,</span> <span class="m">38</span><span class="p">,</span> <span class="m">20</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>35</li><li>39</li><li>42</li><li>36</li><li>35</li></ol>
+</div><div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>27</li><li>29</li><li>37</li><li>38</li><li>20</li></ol>
+</div></div>
+</div>
+<p>Average $<span class="math notranslate nohighlight">\(\frac{h + \ell}{2}\)</span>$</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="m">35</span><span class="p">,</span> <span class="m">39</span><span class="p">,</span> <span class="m">42</span><span class="p">,</span> <span class="m">36</span><span class="p">,</span> <span class="m">35</span><span class="p">)</span> <span class="o">+</span> <span class="nf">c</span><span class="p">(</span><span class="m">27</span><span class="p">,</span> <span class="m">29</span><span class="p">,</span> <span class="m">37</span><span class="p">,</span> <span class="m">38</span><span class="p">,</span> <span class="m">20</span><span class="p">))</span><span class="o">/</span><span class="m">2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>31</li><li>34</li><li>39.5</li><li>37</li><li>27.5</li></ol>
+</div></div>
+</div>
+</div>
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="example-1-arithmetic">
+<h3>Example 1: Arithmetic<a class="headerlink" href="#example-1-arithmetic" title="Permalink to this headline">¶</a></h3>
+<p>R uses the standard order of operations.</p>
+<div class="math notranslate nohighlight">
+\[1 + 4 \cdot 3 ^ 2 - \frac{5}{2} = 34.5\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="m">1</span> <span class="o">+</span> <span class="m">4</span> <span class="o">*</span> <span class="m">3</span> <span class="o">^</span> <span class="m">2</span> <span class="o">-</span> <span class="m">5</span><span class="o">/</span><span class="m">2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">34.5</div></div>
+</div>
+<div class="math notranslate nohighlight">
+\[\frac{1 + (4 \cdot 3) ^ 2 - 10}{2}=70\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="m">1</span> <span class="o">+</span> <span class="p">(</span><span class="m">4</span><span class="o">*</span><span class="m">3</span><span class="p">)</span><span class="o">^</span><span class="m">2</span> <span class="o">-</span> <span class="m">5</span><span class="p">)</span><span class="o">/</span><span class="m">2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">70</div></div>
+</div>
+</div>
+<div class="section" id="example-2-mathematical-constants-and-functions">
+<h3>Example 2: Mathematical constants and functions<a class="headerlink" href="#example-2-mathematical-constants-and-functions" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>ractio of the circumfance and diameter of circle: <code class="docutils literal notranslate"><span class="pre">pi</span></code>, <span class="math notranslate nohighlight">\(\pi \approx 3.14159265358979\)</span></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="kc">pi</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">3.14159265358979</div></div>
+</div>
+<ul class="simple">
+<li><p>base of the natural logarithm: <code class="docutils literal notranslate"><span class="pre">exp(1)</span></code>, <span class="math notranslate nohighlight">\(e \approx 2.71828182845905\)</span></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">exp</span><span class="p">(</span><span class="m">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">2.71828182845905</div></div>
+</div>
+<ul class="simple">
+<li><p>absolute value:  <code class="docutils literal notranslate"><span class="pre">abs()</span></code> eg. <span class="math notranslate nohighlight">\(\lvert -5 \rvert = 5\)</span></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">abs</span><span class="p">(</span><span class="m">-5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">5</div></div>
+</div>
+<ul class="simple">
+<li><p>square root: <code class="docutils literal notranslate"><span class="pre">sqrt()</span></code> eg. <span class="math notranslate nohighlight">\(\sqrt{9} = 3\)</span></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">sqrt</span><span class="p">(</span><span class="m">9</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">3</div></div>
+</div>
+<ul class="simple">
+<li><p>natural logarithm: <code class="docutils literal notranslate"><span class="pre">log()</span></code> eg. <span class="math notranslate nohighlight">\(\ln(2.71) \approx 1\)</span></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">log</span><span class="p">(</span><span class="m">2.71</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">0.99694863489161</div></div>
+</div>
+<ul class="simple">
+<li><p>exponential function: <code class="docutils literal notranslate"><span class="pre">exp()</span></code> eg. <span class="math notranslate nohighlight">\(e^3 \approx 20.0855369231877\)</span></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">exp</span><span class="p">(</span><span class="m">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">20.0855369231877</div></div>
+</div>
+</div>
+<div class="section" id="example-3-data-types">
+<h3>Example 3: Data types<a class="headerlink" href="#example-3-data-types" title="Permalink to this headline">¶</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">typeof()</span></code> returns the data type of the R object that is inputed into it.</p>
+<ul class="simple">
+<li><p><strong>character</strong> refers to letters and symbols in quote marks</p></li>
+<li><p><strong>double</strong> is a decimal number, note <span class="math notranslate nohighlight">\(5 = 5.0\)</span> can be thought of as a decimal</p></li>
+<li><p><strong>integer</strong> is a whole number eg. <span class="math notranslate nohighlight">\(\dots , -2,-1,0,1,2, \dots \)</span></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">typeof</span><span class="p">(</span><span class="s">&#39;smile&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">'character'</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">typeof</span><span class="p">(</span><span class="m">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">'double'</div></div>
+</div>
+</div>
+<div class="section" id="example-4-vectors">
+<h3>Example 4: Vectors<a class="headerlink" href="#example-4-vectors" title="Permalink to this headline">¶</a></h3>
+<p>Vectors are ordered collections of entries where <strong>all</strong> entries have the same data type. The R function <code class="docutils literal notranslate"><span class="pre">c()</span></code> is used to construct vectors. The <code class="docutils literal notranslate"><span class="pre">typof()</span></code> function returns the type of the elements in the vector.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">c</span><span class="p">(</span><span class="s">&#39;a&#39;</span><span class="p">,</span><span class="s">&#39;b&#39;</span><span class="p">,</span><span class="s">&#39;c&#39;</span><span class="p">,</span><span class="s">&#39;d&#39;</span><span class="p">,</span><span class="s">&#39;e&#39;</span><span class="p">,</span><span class="s">&#39;f&#39;</span><span class="p">,</span><span class="s">&#39;g&#39;</span><span class="p">,</span><span class="s">&#39;h&#39;</span><span class="p">,</span><span class="s">&#39;i&#39;</span><span class="p">,</span><span class="s">&#39;j&#39;</span><span class="p">,</span><span class="s">&#39;k&#39;</span><span class="p">,</span><span class="s">&#39;l&#39;</span><span class="p">,</span><span class="s">&#39;m&#39;</span><span class="p">,</span><span class="s">&#39;n&#39;</span><span class="p">,</span><span class="s">&#39;o&#39;</span><span class="p">,</span><span class="s">&#39;p&#39;</span><span class="p">,</span><span class="s">&#39;q&#39;</span><span class="p">,</span><span class="s">&#39;r&#39;</span><span class="p">,</span><span class="s">&#39;s&#39;</span><span class="p">,</span><span class="s">&#39;t&#39;</span><span class="p">,</span><span class="s">&#39;u&#39;</span><span class="p">,</span><span class="s">&#39;v&#39;</span><span class="p">,</span><span class="s">&#39;w&#39;</span><span class="p">,</span><span class="s">&#39;x&#39;</span><span class="p">,</span><span class="s">&#39;y&#39;</span><span class="p">,</span><span class="s">&#39;z&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>'a'</li><li>'b'</li><li>'c'</li><li>'d'</li><li>'e'</li><li>'f'</li><li>'g'</li><li>'h'</li><li>'i'</li><li>'j'</li><li>'k'</li><li>'l'</li><li>'m'</li><li>'n'</li><li>'o'</li><li>'p'</li><li>'q'</li><li>'r'</li><li>'s'</li><li>'t'</li><li>'u'</li><li>'v'</li><li>'w'</li><li>'x'</li><li>'y'</li><li>'z'</li></ol>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">c</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">5</span><span class="p">,</span><span class="m">7</span><span class="p">,</span><span class="m">11</span><span class="p">,</span><span class="m">13</span><span class="p">,</span><span class="m">17</span><span class="p">,</span><span class="m">19</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>2</li><li>3</li><li>5</li><li>7</li><li>11</li><li>13</li><li>17</li><li>19</li></ol>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">typeof</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="s">&#39;a&#39;</span><span class="p">,</span><span class="s">&#39;b&#39;</span><span class="p">,</span><span class="s">&#39;c&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">'character'</div></div>
+</div>
+<p>Note: R will coerce the elements of a vector into the same type. In the example below, the double 1 is converted into a chacter ‘1’.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">c</span><span class="p">(</span><span class="s">&#39;a&#39;</span><span class="p">,</span> <span class="m">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>'a'</li><li>'1'</li></ol>
+</div></div>
+</div>
+</div>
+<div class="section" id="example-5-vectors-of-numbers">
+<h3>Example 5: Vectors of numbers<a class="headerlink" href="#example-5-vectors-of-numbers" title="Permalink to this headline">¶</a></h3>
+<p>If <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> are integers such that <span class="math notranslate nohighlight">\(a\le b\)</span>, then <code class="docutils literal notranslate"><span class="pre">a:b</span></code> wich create the vector of integers starting with <span class="math notranslate nohighlight">\(a\)</span> and ending with <span class="math notranslate nohighlight">\(b\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="m">1</span><span class="o">:</span><span class="m">10</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>6</li><li>7</li><li>8</li><li>9</li><li>10</li></ol>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="m">-5</span><span class="o">:</span><span class="m">2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>-5</li><li>-4</li><li>-3</li><li>-2</li><li>-1</li><li>0</li><li>1</li><li>2</li></ol>
+</div></div>
+</div>
+</div>
+<div class="section" id="example-6-math-with-one-vector">
+<h3>Example 6: Math with one vector<a class="headerlink" href="#example-6-math-with-one-vector" title="Permalink to this headline">¶</a></h3>
+<p>Arithmetic operations are applied to each element of a vector.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="m">1</span><span class="o">:</span><span class="m">10</span> <span class="o">+</span> <span class="m">2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>3</li><li>4</li><li>5</li><li>6</li><li>7</li><li>8</li><li>9</li><li>10</li><li>11</li><li>12</li></ol>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">10</span><span class="p">)</span><span class="o">*</span><span class="m">2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>2</li><li>4</li><li>6</li><li>8</li><li>10</li><li>12</li><li>14</li><li>16</li><li>18</li><li>20</li></ol>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">10</span><span class="p">)</span><span class="o">^</span><span class="m">2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>1</li><li>4</li><li>9</li><li>16</li><li>25</li><li>36</li><li>49</li><li>64</li><li>81</li><li>100</li></ol>
+</div></div>
+</div>
+</div>
+<div class="section" id="example-7-math-with-multiple-vectors">
+<h3>Example 7: Math with multiple vectors<a class="headerlink" href="#example-7-math-with-multiple-vectors" title="Permalink to this headline">¶</a></h3>
+<p>Arithmetic operations with multiple vectors are done entry-by-entry.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">c</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="m">4</span><span class="p">,</span><span class="m">6</span><span class="p">,</span><span class="m">8</span><span class="p">)</span> <span class="o">+</span> <span class="nf">c</span><span class="p">(</span><span class="m">-1</span><span class="p">,</span><span class="m">0</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>1</li><li>4</li><li>7</li><li>10</li></ol>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">c</span><span class="p">(</span><span class="m">2</span> <span class="o">+</span> <span class="p">(</span><span class="m">-1</span><span class="p">),</span> <span class="m">4</span> <span class="o">+</span> <span class="m">0</span><span class="p">,</span> <span class="m">6</span> <span class="o">+</span> <span class="m">1</span><span class="p">,</span> <span class="m">8</span> <span class="o">+</span> <span class="m">2</span><span class="p">)</span> <span class="c1"># sum of vectors done manualy</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>1</li><li>4</li><li>7</li><li>10</li></ol>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "r"
+        },
+        kernelOptions: {
+            kernelName: "ir",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'ir'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="outside_sources.html" title="previous page">Other References</a>
+    <a class='right-next' id="next-link" href="lesson03_solutions.html" title="next page">Lesson 3 Working with Data</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Corrin Clarkson<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>

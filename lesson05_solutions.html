@@ -1,0 +1,972 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson 5 - Solutions &#8212; From Data to Discovery</title>
+    
+  <link rel="stylesheet" href="_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Lesson 06 - Data Visualization" href="lesson06_solutions.html" />
+    <link rel="prev" title="Lesson 4 Solutions" href="lesson04_solutions.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  
+  <h1 class="site-logo" id="site-title">From Data to Discovery</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="landing_page.html">
+   From Data to Discovery
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  References
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="outside_sources.html">
+   Other References
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Exercises
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="lesson02_solutions.html">
+   Lesson 2: Solutions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lesson03_solutions.html">
+   Lesson 3 Working with Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lesson04_solutions.html">
+   Lesson 4 Solutions
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Lesson 5 -  Solutions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lesson06_solutions.html">
+   Lesson 06 -  Data Visualization
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/lesson05_solutions.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/lesson05_solutions.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#part-1-set-up-and-sort">
+   Part 1 - Set up and Sort
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-1-set-up">
+     Exercise 1 - Set up
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-2-sort">
+     Exercise 2 - Sort
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#part-2-filter">
+   Part 2 - Filter
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-3-old-chihuahuas">
+     Exercise 3 - Old Chihuahuas
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#part-3-group-and-summarize">
+   Part 3 - Group and Summarize
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-4-where-do-the-dogs-live">
+     Exercise 4 - Where do the dogs live?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#excercise-5-average-age">
+     Excercise 5 - Average age
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-6-popular-name">
+     Exercise 6 - Popular name
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#examples">
+   Examples
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-1-sort-berkeley-data">
+     Example 1 - sort berkeley data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-2-sort-weather-data">
+     Example 2 - sort weather data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-3-group-and-summarize-weather-data">
+     Example 3 - group and summarize weather data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-4-longest-lived-breed">
+     Example 4 - Longest lived breed
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="lesson-5-solutions">
+<h1>Lesson 5 -  Solutions<a class="headerlink" href="#lesson-5-solutions" title="Permalink to this headline">¶</a></h1>
+<p>These exercises are to help you check your understanding during class. They will not be collected.</p>
+<div class="section" id="part-1-set-up-and-sort">
+<h2>Part 1 - Set up and Sort<a class="headerlink" href="#part-1-set-up-and-sort" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="exercise-1-set-up">
+<h3>Exercise 1 - Set up<a class="headerlink" href="#exercise-1-set-up" title="Permalink to this headline">¶</a></h3>
+<p>There is a CSV file called <code class="docutils literal notranslate"><span class="pre">NYC_Dog_Licensing.csv</span></code> in the <code class="docutils literal notranslate"><span class="pre">~/shared/data</span> <span class="pre">folder</span></code>. As the name indicates, this file contains information about New York City dog licences. This data comes from the <a class="reference external" href="https://opendata.cityofnewyork.us/">NYC OpenData project</a>.</p>
+<ul class="simple">
+<li><p>Import the NYC Dog Licenses data using the <code class="docutils literal notranslate"><span class="pre">read.csv()</span></code> function and store it in an R data frame called <code class="docutils literal notranslate"><span class="pre">nyc_dogs</span></code>.</p></li>
+<li><p>Load the dplyr package by excuting the <code class="docutils literal notranslate"><span class="pre">library('dplyr')</span></code>command. You can ignore the warnings about masked opbjects.</p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">mutate()</span></code> to add a new column called <code class="docutils literal notranslate"><span class="pre">Age</span></code> to the data frame. This column should contain an approximation of each dog’s age.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">nyc_dogs</span> <span class="o">&lt;-</span> <span class="nf">read.csv</span><span class="p">(</span><span class="s">&#39;~/shared/data/NYC_Dog_Licensing.csv&#39;</span><span class="p">)</span>  <span class="c1"># add the final name and path in quotes</span>
+<span class="nf">library</span><span class="p">(</span><span class="s">&#39;dplyr&#39;</span><span class="p">)</span> <span class="c1"># load the dplyr package</span>
+
+<span class="n">nyc_dogs</span> <span class="o">&lt;-</span> <span class="nf">mutate</span><span class="p">(</span><span class="n">nyc_dogs</span><span class="p">,</span> <span class="n">Age</span> <span class="o">=</span> <span class="m">2021</span> <span class="o">-</span> <span class="n">AnimalBirthYear</span><span class="p">)</span> <span class="c1"># age is approximately current_year - birth_year</span>
+<span class="nf">head</span><span class="p">(</span><span class="n">nyc_dogs</span><span class="p">)</span> <span class="c1"># view the results</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning message in file(file, &quot;rt&quot;):
+“cannot open file &#39;/home/clarkson/shared/data/NYC_Dog_Licensing.csv&#39;: No such file or directory”
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="n">Error</span> <span class="ow">in</span> <span class="n">file</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="s2">&quot;rt&quot;</span><span class="p">):</span> <span class="n">cannot</span> <span class="nb">open</span> <span class="n">the</span> <span class="n">connection</span>
+<span class="ne">Traceback</span>:
+
+<span class="mi">1</span><span class="o">.</span> <span class="n">read</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="s2">&quot;~/shared/data/NYC_Dog_Licensing.csv&quot;</span><span class="p">)</span>
+<span class="mi">2</span><span class="o">.</span> <span class="n">read</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="n">file</span> <span class="o">=</span> <span class="n">file</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="n">header</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="n">sep</span><span class="p">,</span> <span class="n">quote</span> <span class="o">=</span> <span class="n">quote</span><span class="p">,</span> 
+ <span class="o">.</span>     <span class="n">dec</span> <span class="o">=</span> <span class="n">dec</span><span class="p">,</span> <span class="n">fill</span> <span class="o">=</span> <span class="n">fill</span><span class="p">,</span> <span class="n">comment</span><span class="o">.</span><span class="n">char</span> <span class="o">=</span> <span class="n">comment</span><span class="o">.</span><span class="n">char</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span>
+<span class="mi">3</span><span class="o">.</span> <span class="n">file</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="s2">&quot;rt&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="exercise-2-sort">
+<h3>Exercise 2 - Sort<a class="headerlink" href="#exercise-2-sort" title="Permalink to this headline">¶</a></h3>
+<p>Use <code class="docutils literal notranslate"><span class="pre">arrange()</span></code> to sort entries in nyc_dogs in the three ways described below. In each case, check your work by using <code class="docutils literal notranslate"><span class="pre">head()</span></code> to view the first few rows of the result.</p>
+<ul class="simple">
+<li><p>i) Sort by <code class="docutils literal notranslate"><span class="pre">AnimalName</span></code> column, from A to Z</p></li>
+<li><p>ii) Sort by <code class="docutils literal notranslate"><span class="pre">AnimalName</span></code> from Z to A</p></li>
+<li><p>iii) Sort the entries by <code class="docutils literal notranslate"><span class="pre">AnimalName</span></code> column from A to Z, then by the <code class="docutils literal notranslate"><span class="pre">AnimalBirthYear</span></code> column in descending order</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">nyc_dogs</span> <span class="o">&lt;-</span> <span class="nf">arrange</span><span class="p">(</span><span class="n">nyc_dogs</span><span class="p">,</span> <span class="n">AnimalName</span><span class="p">)</span>
+<span class="nf">head</span><span class="p">(</span><span class="n">nyc_dogs</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table>
+<thead><tr><th scope=col>X</th><th scope=col>RowNumber</th><th scope=col>AnimalName</th><th scope=col>AnimalGender</th><th scope=col>AnimalBirthYear</th><th scope=col>BreedName</th><th scope=col>Borough</th><th scope=col>ZipCode</th><th scope=col>LicenseIssuedDate</th><th scope=col>LicenseExpiredDate</th><th scope=col>Extract.Year</th><th scope=col>Age</th></tr></thead>
+<tbody>
+	<tr><td>200                          </td><td> 76458                       </td><td>ABBY                         </td><td>F                            </td><td>2016                         </td><td>Morkie                       </td><td>NA                           </td><td>10014                        </td><td>06/30/2017                   </td><td>2022-05-06                   </td><td>2017                         </td><td> 5                           </td></tr>
+	<tr><td>357                          </td><td> 26111                       </td><td>ABBY                         </td><td>F                            </td><td>2016                         </td><td>Morkie                       </td><td>NA                           </td><td>10014                        </td><td>06/30/2017                   </td><td>2022-05-06                   </td><td>2018                         </td><td> 5                           </td></tr>
+	<tr><td>418                          </td><td> 63866                       </td><td>AEON                         </td><td>F                            </td><td>2002                         </td><td>Labrador Retriever Crossbreed</td><td>NA                           </td><td>10012                        </td><td>04/03/2018                   </td><td>2021-04-03                   </td><td>2018                         </td><td>19                           </td></tr>
+	<tr><td> 64                          </td><td>102636                       </td><td>ALPHA                        </td><td>F                            </td><td>2015                         </td><td>Pomeranian                   </td><td>NA                           </td><td>10014                        </td><td>11/01/2016                   </td><td>2021-11-01                   </td><td>2016                         </td><td> 6                           </td></tr>
+	<tr><td>140                          </td><td> 36067                       </td><td>ALPHA                        </td><td>F                            </td><td>2015                         </td><td>Pomeranian                   </td><td>NA                           </td><td>10014                        </td><td>11/01/2016                   </td><td>2021-11-01                   </td><td>2017                         </td><td> 6                           </td></tr>
+	<tr><td>299                          </td><td>  8383                       </td><td>ALPHA                        </td><td>F                            </td><td>2015                         </td><td>Pomeranian                   </td><td>NA                           </td><td>10014                        </td><td>11/01/2016                   </td><td>2021-11-01                   </td><td>2018                         </td><td> 6                           </td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># i) Sort Animal Name from A to Z</span>
+<span class="nf">head</span><span class="p">(</span><span class="nf">arrange</span><span class="p">(</span><span class="n">nyc_dogs</span><span class="p">,</span> <span class="n">AnimalName</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table>
+<thead><tr><th scope=col>X</th><th scope=col>RowNumber</th><th scope=col>AnimalName</th><th scope=col>AnimalGender</th><th scope=col>AnimalBirthYear</th><th scope=col>BreedName</th><th scope=col>Borough</th><th scope=col>ZipCode</th><th scope=col>LicenseIssuedDate</th><th scope=col>LicenseExpiredDate</th><th scope=col>Extract.Year</th><th scope=col>Age</th></tr></thead>
+<tbody>
+	<tr><td>200                          </td><td> 76458                       </td><td>ABBY                         </td><td>F                            </td><td>2016                         </td><td>Morkie                       </td><td>NA                           </td><td>10014                        </td><td>06/30/2017                   </td><td>2022-05-06                   </td><td>2017                         </td><td> 4                           </td></tr>
+	<tr><td>357                          </td><td> 26111                       </td><td>ABBY                         </td><td>F                            </td><td>2016                         </td><td>Morkie                       </td><td>NA                           </td><td>10014                        </td><td>06/30/2017                   </td><td>2022-05-06                   </td><td>2018                         </td><td> 4                           </td></tr>
+	<tr><td>418                          </td><td> 63866                       </td><td>AEON                         </td><td>F                            </td><td>2002                         </td><td>Labrador Retriever Crossbreed</td><td>NA                           </td><td>10012                        </td><td>04/03/2018                   </td><td>2021-04-03                   </td><td>2018                         </td><td>18                           </td></tr>
+	<tr><td> 64                          </td><td>102636                       </td><td>ALPHA                        </td><td>F                            </td><td>2015                         </td><td>Pomeranian                   </td><td>NA                           </td><td>10014                        </td><td>11/01/2016                   </td><td>2021-11-01                   </td><td>2016                         </td><td> 5                           </td></tr>
+	<tr><td>140                          </td><td> 36067                       </td><td>ALPHA                        </td><td>F                            </td><td>2015                         </td><td>Pomeranian                   </td><td>NA                           </td><td>10014                        </td><td>11/01/2016                   </td><td>2021-11-01                   </td><td>2017                         </td><td> 5                           </td></tr>
+	<tr><td>299                          </td><td>  8383                       </td><td>ALPHA                        </td><td>F                            </td><td>2015                         </td><td>Pomeranian                   </td><td>NA                           </td><td>10014                        </td><td>11/01/2016                   </td><td>2021-11-01                   </td><td>2018                         </td><td> 5                           </td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># ii) Sort Animal Name from Z to A</span>
+<span class="nf">head</span><span class="p">(</span><span class="nf">arrange</span><span class="p">(</span><span class="n">nyc_dogs</span><span class="p">,</span> <span class="nf">desc</span><span class="p">(</span><span class="n">AnimalName</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table>
+<thead><tr><th scope=col>X</th><th scope=col>RowNumber</th><th scope=col>AnimalName</th><th scope=col>AnimalGender</th><th scope=col>AnimalBirthYear</th><th scope=col>BreedName</th><th scope=col>Borough</th><th scope=col>ZipCode</th><th scope=col>LicenseIssuedDate</th><th scope=col>LicenseExpiredDate</th><th scope=col>Extract.Year</th><th scope=col>Age</th></tr></thead>
+<tbody>
+	<tr><td>184             </td><td>63576           </td><td>ZOEY            </td><td>F               </td><td>2014            </td><td>Labradoodle     </td><td>NA              </td><td>10014           </td><td>05/03/2017      </td><td>2022-03-27      </td><td>2017            </td><td>6               </td></tr>
+	<tr><td>343             </td><td>20071           </td><td>ZOEY            </td><td>F               </td><td>2014            </td><td>Labradoodle     </td><td>NA              </td><td>10014           </td><td>05/03/2017      </td><td>2022-03-27      </td><td>2018            </td><td>6               </td></tr>
+	<tr><td>  3             </td><td>43865           </td><td>ZOE             </td><td>F               </td><td>2013            </td><td>Maltese         </td><td>NA              </td><td>10014           </td><td>02/15/2016      </td><td>2021-02-15      </td><td>2016            </td><td>7               </td></tr>
+	<tr><td> 79             </td><td> 9038           </td><td>ZOE             </td><td>F               </td><td>2013            </td><td>Maltese         </td><td>NA              </td><td>10014           </td><td>02/15/2016      </td><td>2021-02-15      </td><td>2017            </td><td>7               </td></tr>
+	<tr><td>238             </td><td> 3449           </td><td>ZOE             </td><td>F               </td><td>2013            </td><td>Maltese         </td><td>NA              </td><td>10014           </td><td>02/15/2016      </td><td>2021-02-15      </td><td>2018            </td><td>7               </td></tr>
+	<tr><td>436             </td><td>75071           </td><td>ZIRA            </td><td>F               </td><td>2017            </td><td>Brussels Griffon</td><td>NA              </td><td>10014           </td><td>05/26/2018      </td><td>2023-05-17      </td><td>2018            </td><td>3               </td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># iii) Sort Animal Name from A to Z, then short by Animal Birth Year in decending order</span>
+<span class="c1"># Strategy 1</span>
+<span class="c1"># display without storing the information</span>
+<span class="nf">arrange</span><span class="p">(</span><span class="n">nyc_dogs</span><span class="p">,</span> <span class="n">AnimalName</span><span class="p">,</span> <span class="nf">desc</span><span class="p">(</span><span class="n">AnimalBirthYear</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table>
+<thead><tr><th scope=col>X</th><th scope=col>RowNumber</th><th scope=col>AnimalName</th><th scope=col>AnimalGender</th><th scope=col>AnimalBirthYear</th><th scope=col>BreedName</th><th scope=col>Borough</th><th scope=col>ZipCode</th><th scope=col>LicenseIssuedDate</th><th scope=col>LicenseExpiredDate</th><th scope=col>Extract.Year</th><th scope=col>Age</th></tr></thead>
+<tbody>
+	<tr><td>200                          </td><td> 76458                       </td><td>ABBY                         </td><td>F                            </td><td>2016                         </td><td>Morkie                       </td><td>NA                           </td><td>10014                        </td><td>06/30/2017                   </td><td>2022-05-06                   </td><td>2017                         </td><td> 5                           </td></tr>
+	<tr><td>357                          </td><td> 26111                       </td><td>ABBY                         </td><td>F                            </td><td>2016                         </td><td>Morkie                       </td><td>NA                           </td><td>10014                        </td><td>06/30/2017                   </td><td>2022-05-06                   </td><td>2018                         </td><td> 5                           </td></tr>
+	<tr><td>418                          </td><td> 63866                       </td><td>AEON                         </td><td>F                            </td><td>2002                         </td><td>Labrador Retriever Crossbreed</td><td>NA                           </td><td>10012                        </td><td>04/03/2018                   </td><td>2021-04-03                   </td><td>2018                         </td><td>19                           </td></tr>
+	<tr><td> 64                          </td><td>102636                       </td><td>ALPHA                        </td><td>F                            </td><td>2015                         </td><td>Pomeranian                   </td><td>NA                           </td><td>10014                        </td><td>11/01/2016                   </td><td>2021-11-01                   </td><td>2016                         </td><td> 6                           </td></tr>
+	<tr><td>140                          </td><td> 36067                       </td><td>ALPHA                        </td><td>F                            </td><td>2015                         </td><td>Pomeranian                   </td><td>NA                           </td><td>10014                        </td><td>11/01/2016                   </td><td>2021-11-01                   </td><td>2017                         </td><td> 6                           </td></tr>
+	<tr><td>299                          </td><td>  8383                       </td><td>ALPHA                        </td><td>F                            </td><td>2015                         </td><td>Pomeranian                   </td><td>NA                           </td><td>10014                        </td><td>11/01/2016                   </td><td>2021-11-01                   </td><td>2018                         </td><td> 6                           </td></tr>
+	<tr><td>219                          </td><td> 99313                       </td><td>ALVIE                        </td><td>F                            </td><td>2012                         </td><td>Italian Greyhound            </td><td>NA                           </td><td>10012                        </td><td>09/30/2017                   </td><td>2022-09-18                   </td><td>2017                         </td><td> 9                           </td></tr>
+	<tr><td>377                          </td><td> 37287                       </td><td>ALVIE                        </td><td>F                            </td><td>2012                         </td><td>Italian Greyhound            </td><td>NA                           </td><td>10012                        </td><td>09/30/2017                   </td><td>2022-09-18                   </td><td>2018                         </td><td> 9                           </td></tr>
+	<tr><td> 21                          </td><td> 62842                       </td><td>ARCHIE                       </td><td>M                            </td><td>2012                         </td><td>Puggle                       </td><td>NA                           </td><td>10014                        </td><td>05/12/2016                   </td><td>2021-05-12                   </td><td>2016                         </td><td> 9                           </td></tr>
+	<tr><td> 97                          </td><td> 17743                       </td><td>ARCHIE                       </td><td>M                            </td><td>2012                         </td><td>Puggle                       </td><td>NA                           </td><td>10014                        </td><td>05/12/2016                   </td><td>2021-05-12                   </td><td>2017                         </td><td> 9                           </td></tr>
+	<tr><td>256                          </td><td>  4844                       </td><td>ARCHIE                       </td><td>M                            </td><td>2012                         </td><td>Puggle                       </td><td>NA                           </td><td>10014                        </td><td>05/12/2016                   </td><td>2021-05-12                   </td><td>2018                         </td><td> 9                           </td></tr>
+	<tr><td>497                          </td><td>106382                       </td><td>ARIELLA                      </td><td>F                            </td><td>2013                         </td><td>German Shepherd Dog          </td><td>NA                           </td><td>10014                        </td><td>10/30/2018                   </td><td>2021-10-30                   </td><td>2018                         </td><td> 8                           </td></tr>
+	<tr><td> 35                          </td><td> 78104                       </td><td>ARTHUR                       </td><td>M                            </td><td>2014                         </td><td>Vizsla                       </td><td>NA                           </td><td>10012                        </td><td>07/13/2016                   </td><td>2021-07-13                   </td><td>2016                         </td><td> 7                           </td></tr>
+	<tr><td>111                          </td><td> 23956                       </td><td>ARTHUR                       </td><td>M                            </td><td>2014                         </td><td>Vizsla                       </td><td>NA                           </td><td>10012                        </td><td>07/13/2016                   </td><td>2021-07-13                   </td><td>2017                         </td><td> 7                           </td></tr>
+	<tr><td>270                          </td><td>  5834                       </td><td>ARTHUR                       </td><td>M                            </td><td>2014                         </td><td>Vizsla                       </td><td>NA                           </td><td>10012                        </td><td>07/13/2016                   </td><td>2021-07-13                   </td><td>2018                         </td><td> 7                           </td></tr>
+	<tr><td>478                          </td><td> 98031                       </td><td>ATHENA                       </td><td>F                            </td><td>2011                         </td><td>Staffordshire Bull Terrier   </td><td>NA                           </td><td>10013                        </td><td>09/16/2018                   </td><td>2021-05-28                   </td><td>2018                         </td><td>10                           </td></tr>
+	<tr><td>419                          </td><td> 64389                       </td><td>BABA                         </td><td>M                            </td><td>2016                         </td><td>Poodle, Miniature            </td><td>NA                           </td><td>10013                        </td><td>04/05/2018                   </td><td>2023-04-05                   </td><td>2018                         </td><td> 5                           </td></tr>
+	<tr><td> 25                          </td><td> 68465                       </td><td>BAGEL                        </td><td>M                            </td><td>2015                         </td><td>Poodle Crossbreed            </td><td>NA                           </td><td>10014                        </td><td>06/05/2016                   </td><td>2021-06-05                   </td><td>2016                         </td><td> 6                           </td></tr>
+	<tr><td>101                          </td><td> 19968                       </td><td>BAGEL                        </td><td>M                            </td><td>2015                         </td><td>Poodle Crossbreed            </td><td>NA                           </td><td>10014                        </td><td>06/05/2016                   </td><td>2021-06-05                   </td><td>2017                         </td><td> 6                           </td></tr>
+	<tr><td>260                          </td><td>  5204                       </td><td>BAGEL                        </td><td>M                            </td><td>2015                         </td><td>Poodle Crossbreed            </td><td>NA                           </td><td>10014                        </td><td>06/05/2016                   </td><td>2021-06-05                   </td><td>2018                         </td><td> 6                           </td></tr>
+	<tr><td>207                          </td><td> 80567                       </td><td>BAILEY                       </td><td>M                            </td><td>2005                         </td><td>Chihuahua                    </td><td>NA                           </td><td>10013                        </td><td>07/18/2017                   </td><td>2022-08-30                   </td><td>2017                         </td><td>16                           </td></tr>
+	<tr><td>364                          </td><td> 28136                       </td><td>BAILEY                       </td><td>M                            </td><td>2005                         </td><td>Chihuahua                    </td><td>NA                           </td><td>10013                        </td><td>07/18/2017                   </td><td>2022-08-30                   </td><td>2018                         </td><td>16                           </td></tr>
+	<tr><td>164                          </td><td> 48117                       </td><td>BANDIT                       </td><td>M                            </td><td>2015                         </td><td>Havanese                     </td><td>NA                           </td><td>10014                        </td><td>02/12/2017                   </td><td>2022-02-12                   </td><td>2017                         </td><td> 6                           </td></tr>
+	<tr><td>324                          </td><td> 12521                       </td><td>BANDIT                       </td><td>M                            </td><td>2015                         </td><td>Havanese                     </td><td>NA                           </td><td>10014                        </td><td>02/12/2017                   </td><td>2022-02-12                   </td><td>2018                         </td><td> 6                           </td></tr>
+	<tr><td> 57                          </td><td> 93663                       </td><td>BANDIT                       </td><td>M                            </td><td>2012                         </td><td>Mudi                         </td><td>NA                           </td><td>10013                        </td><td>09/18/2016                   </td><td>2021-09-18                   </td><td>2016                         </td><td> 9                           </td></tr>
+	<tr><td>132                          </td><td> 31572                       </td><td>BANDIT                       </td><td>M                            </td><td>2012                         </td><td>Mudi                         </td><td>NA                           </td><td>10013                        </td><td>09/18/2016                   </td><td>2021-09-18                   </td><td>2017                         </td><td> 9                           </td></tr>
+	<tr><td>291                          </td><td>  7654                       </td><td>BANDIT                       </td><td>M                            </td><td>2012                         </td><td>Mudi                         </td><td>NA                           </td><td>10013                        </td><td>09/18/2016                   </td><td>2021-09-18                   </td><td>2018                         </td><td> 9                           </td></tr>
+	<tr><td>  8                          </td><td> 49585                       </td><td>BANDIT                       </td><td>M                            </td><td>2007                         </td><td>Collie Crossbreed            </td><td>NA                           </td><td>10013                        </td><td>03/15/2016                   </td><td>2021-02-26                   </td><td>2016                         </td><td>14                           </td></tr>
+	<tr><td> 84                          </td><td> 11608                       </td><td>BANDIT                       </td><td>M                            </td><td>2007                         </td><td>Collie Crossbreed            </td><td>NA                           </td><td>10013                        </td><td>03/15/2016                   </td><td>2021-02-26                   </td><td>2017                         </td><td>14                           </td></tr>
+	<tr><td>243                          </td><td>  3814                       </td><td>BANDIT                       </td><td>M                            </td><td>2007                         </td><td>Collie Crossbreed            </td><td>NA                           </td><td>10013                        </td><td>03/15/2016                   </td><td>2021-02-26                   </td><td>2018                         </td><td>14                           </td></tr>
+	<tr><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td></tr>
+	<tr><td>353                          </td><td> 22976                       </td><td>TUCKER                       </td><td>M                            </td><td>2016                         </td><td>Australian Shepherd          </td><td>NA                           </td><td>10014                        </td><td>05/31/2017                   </td><td>2022-04-24                   </td><td>2018                         </td><td> 5                           </td></tr>
+	<tr><td>425                          </td><td> 66545                       </td><td>URSO                         </td><td>M                            </td><td>2011                         </td><td>Beagle                       </td><td>NA                           </td><td>10013                        </td><td>04/15/2018                   </td><td>2023-07-20                   </td><td>2018                         </td><td>10                           </td></tr>
+	<tr><td> 60                          </td><td> 97912                       </td><td>VACHETTE                     </td><td>F                            </td><td>2014                         </td><td>Poodle                       </td><td>NA                           </td><td>10013                        </td><td>10/07/2016                   </td><td>2021-10-07                   </td><td>2016                         </td><td> 7                           </td></tr>
+	<tr><td>136                          </td><td> 33557                       </td><td>VACHETTE                     </td><td>F                            </td><td>2014                         </td><td>Poodle                       </td><td>NA                           </td><td>10013                        </td><td>10/07/2016                   </td><td>2021-10-07                   </td><td>2017                         </td><td> 7                           </td></tr>
+	<tr><td>295                          </td><td>  8001                       </td><td>VACHETTE                     </td><td>F                            </td><td>2014                         </td><td>Poodle                       </td><td>NA                           </td><td>10013                        </td><td>10/07/2016                   </td><td>2021-10-07                   </td><td>2018                         </td><td> 7                           </td></tr>
+	<tr><td> 39                          </td><td> 83339                       </td><td>VIOLET                       </td><td>F                            </td><td>2015                         </td><td>Lowchen                      </td><td>NA                           </td><td>10013                        </td><td>08/04/2016                   </td><td>2021-09-24                   </td><td>2016                         </td><td> 6                           </td></tr>
+	<tr><td>115                          </td><td> 26433                       </td><td>VIOLET                       </td><td>F                            </td><td>2015                         </td><td>Lowchen                      </td><td>NA                           </td><td>10013                        </td><td>08/04/2016                   </td><td>2021-09-24                   </td><td>2017                         </td><td> 6                           </td></tr>
+	<tr><td>274                          </td><td>  6382                       </td><td>VIOLET                       </td><td>F                            </td><td>2015                         </td><td>Lowchen                      </td><td>NA                           </td><td>10013                        </td><td>08/04/2016                   </td><td>2021-09-24                   </td><td>2018                         </td><td> 6                           </td></tr>
+	<tr><td> 58                          </td><td> 95393                       </td><td>WALLACE                      </td><td>M                            </td><td>2012                         </td><td>Scottish Terrier             </td><td>NA                           </td><td>10014                        </td><td>09/26/2016                   </td><td>2021-11-13                   </td><td>2016                         </td><td> 9                           </td></tr>
+	<tr><td>135                          </td><td> 32451                       </td><td>WALLACE                      </td><td>M                            </td><td>2012                         </td><td>Scottish Terrier             </td><td>NA                           </td><td>10014                        </td><td>09/26/2016                   </td><td>2021-11-13                   </td><td>2017                         </td><td> 9                           </td></tr>
+	<tr><td>293                          </td><td>  7804                       </td><td>WALLACE                      </td><td>M                            </td><td>2012                         </td><td>Scottish Terrier             </td><td>NA                           </td><td>10014                        </td><td>09/26/2016                   </td><td>2021-11-13                   </td><td>2018                         </td><td> 9                           </td></tr>
+	<tr><td>477                          </td><td> 96911                       </td><td>WATSON                       </td><td>M                            </td><td>2018                         </td><td>Shepard Crossbreed           </td><td>NA                           </td><td>10013                        </td><td>09/11/2018                   </td><td>2023-09-11                   </td><td>2018                         </td><td> 3                           </td></tr>
+	<tr><td>409                          </td><td> 56494                       </td><td>WHEATON                      </td><td>F                            </td><td>2016                         </td><td>Wheaton Terrier              </td><td>NA                           </td><td>10012                        </td><td>02/26/2018                   </td><td>2023-04-11                   </td><td>2018                         </td><td> 5                           </td></tr>
+	<tr><td> 63                          </td><td>102013                       </td><td>WINNIE                       </td><td>F                            </td><td>2015                         </td><td>Vizsla                       </td><td>NA                           </td><td>10013                        </td><td>10/28/2016                   </td><td>2021-10-28                   </td><td>2016                         </td><td> 6                           </td></tr>
+	<tr><td>139                          </td><td> 35623                       </td><td>WINNIE                       </td><td>F                            </td><td>2015                         </td><td>Vizsla                       </td><td>NA                           </td><td>10013                        </td><td>10/28/2016                   </td><td>2021-10-28                   </td><td>2017                         </td><td> 6                           </td></tr>
+	<tr><td>298                          </td><td>  8323                       </td><td>WINNIE                       </td><td>F                            </td><td>2015                         </td><td>Vizsla                       </td><td>NA                           </td><td>10013                        </td><td>10/28/2016                   </td><td>2021-10-28                   </td><td>2018                         </td><td> 6                           </td></tr>
+	<tr><td> 49                          </td><td> 91392                       </td><td>YODA                         </td><td>M                            </td><td>2009                         </td><td>Bull Dog, French             </td><td>NA                           </td><td>10014                        </td><td>09/09/2016                   </td><td>2021-10-14                   </td><td>2016                         </td><td>12                           </td></tr>
+	<tr><td>125                          </td><td> 30482                       </td><td>YODA                         </td><td>M                            </td><td>2009                         </td><td>Bull Dog, French             </td><td>NA                           </td><td>10014                        </td><td>09/09/2016                   </td><td>2021-10-14                   </td><td>2017                         </td><td>12                           </td></tr>
+	<tr><td>284                          </td><td>  7427                       </td><td>YODA                         </td><td>M                            </td><td>2009                         </td><td>Bull Dog, French             </td><td>NA                           </td><td>10014                        </td><td>09/09/2016                   </td><td>2021-10-14                   </td><td>2018                         </td><td>12                           </td></tr>
+	<tr><td>167                          </td><td> 48617                       </td><td>ZENA                         </td><td>F                            </td><td>2016                         </td><td>Labrador Retriever Crossbreed</td><td>NA                           </td><td>10014                        </td><td>02/15/2017                   </td><td>2022-05-23                   </td><td>2017                         </td><td> 5                           </td></tr>
+	<tr><td>326                          </td><td> 12678                       </td><td>ZENA                         </td><td>F                            </td><td>2016                         </td><td>Labrador Retriever Crossbreed</td><td>NA                           </td><td>10014                        </td><td>02/15/2017                   </td><td>2022-05-23                   </td><td>2018                         </td><td> 5                           </td></tr>
+	<tr><td>459                          </td><td> 84178                       </td><td>ZEUS                         </td><td>M                            </td><td>2017                         </td><td>Rhodesian Ridgeback          </td><td>NA                           </td><td>10014                        </td><td>07/11/2018                   </td><td>2024-08-03                   </td><td>2018                         </td><td> 4                           </td></tr>
+	<tr><td>427                          </td><td> 67415                       </td><td>ZIGGY                        </td><td>M                            </td><td>2017                         </td><td>Boston Terrier               </td><td>NA                           </td><td>10013                        </td><td>04/19/2018                   </td><td>2023-04-19                   </td><td>2018                         </td><td> 4                           </td></tr>
+	<tr><td>487                          </td><td>102912                       </td><td>ZIGGY                        </td><td>F                            </td><td>2016                         </td><td>German Shepherd Dog          </td><td>NA                           </td><td>10013                        </td><td>10/12/2018                   </td><td>2023-10-12                   </td><td>2018                         </td><td> 5                           </td></tr>
+	<tr><td>436                          </td><td> 75071                       </td><td>ZIRA                         </td><td>F                            </td><td>2017                         </td><td>Brussels Griffon             </td><td>NA                           </td><td>10014                        </td><td>05/26/2018                   </td><td>2023-05-17                   </td><td>2018                         </td><td> 4                           </td></tr>
+	<tr><td>  3                          </td><td> 43865                       </td><td>ZOE                          </td><td>F                            </td><td>2013                         </td><td>Maltese                      </td><td>NA                           </td><td>10014                        </td><td>02/15/2016                   </td><td>2021-02-15                   </td><td>2016                         </td><td> 8                           </td></tr>
+	<tr><td> 79                          </td><td>  9038                       </td><td>ZOE                          </td><td>F                            </td><td>2013                         </td><td>Maltese                      </td><td>NA                           </td><td>10014                        </td><td>02/15/2016                   </td><td>2021-02-15                   </td><td>2017                         </td><td> 8                           </td></tr>
+	<tr><td>238                          </td><td>  3449                       </td><td>ZOE                          </td><td>F                            </td><td>2013                         </td><td>Maltese                      </td><td>NA                           </td><td>10014                        </td><td>02/15/2016                   </td><td>2021-02-15                   </td><td>2018                         </td><td> 8                           </td></tr>
+	<tr><td>184                          </td><td> 63576                       </td><td>ZOEY                         </td><td>F                            </td><td>2014                         </td><td>Labradoodle                  </td><td>NA                           </td><td>10014                        </td><td>05/03/2017                   </td><td>2022-03-27                   </td><td>2017                         </td><td> 7                           </td></tr>
+	<tr><td>343                          </td><td> 20071                       </td><td>ZOEY                         </td><td>F                            </td><td>2014                         </td><td>Labradoodle                  </td><td>NA                           </td><td>10014                        </td><td>05/03/2017                   </td><td>2022-03-27                   </td><td>2018                         </td><td> 7                           </td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># iii) Sort Animal Name from A to Z, then short by Animal Birth Year in decending order</span>
+<span class="c1"># Strategy 2</span>
+<span class="c1"># store in variable and then display</span>
+<span class="n">nyc_dogs</span> <span class="o">&lt;-</span> <span class="nf">arrange</span><span class="p">(</span><span class="n">nyc_dogs</span><span class="p">,</span> <span class="nf">desc</span><span class="p">(</span><span class="n">AnimalBirthYear</span><span class="p">))</span>
+<span class="nf">head</span><span class="p">(</span><span class="nf">arrange</span><span class="p">(</span><span class="n">nyc_dogs</span><span class="p">,</span> <span class="n">AnimalName</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table>
+<caption>A data.frame: 6 × 12</caption>
+<thead>
+	<tr><th></th><th scope=col>X</th><th scope=col>RowNumber</th><th scope=col>AnimalName</th><th scope=col>AnimalGender</th><th scope=col>AnimalBirthYear</th><th scope=col>BreedName</th><th scope=col>Borough</th><th scope=col>ZipCode</th><th scope=col>LicenseIssuedDate</th><th scope=col>LicenseExpiredDate</th><th scope=col>Extract.Year</th><th scope=col>Age</th></tr>
+	<tr><th></th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;lgl&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>1</th><td>200</td><td> 76458</td><td>ABBY </td><td>F</td><td>2016</td><td>Morkie                       </td><td>NA</td><td>10014</td><td>06/30/2017</td><td>2022-05-06</td><td>2017</td><td> 4</td></tr>
+	<tr><th scope=row>2</th><td>357</td><td> 26111</td><td>ABBY </td><td>F</td><td>2016</td><td>Morkie                       </td><td>NA</td><td>10014</td><td>06/30/2017</td><td>2022-05-06</td><td>2018</td><td> 4</td></tr>
+	<tr><th scope=row>3</th><td>418</td><td> 63866</td><td>AEON </td><td>F</td><td>2002</td><td>Labrador Retriever Crossbreed</td><td>NA</td><td>10012</td><td>04/03/2018</td><td>2021-04-03</td><td>2018</td><td>18</td></tr>
+	<tr><th scope=row>4</th><td> 64</td><td>102636</td><td>ALPHA</td><td>F</td><td>2015</td><td>Pomeranian                   </td><td>NA</td><td>10014</td><td>11/01/2016</td><td>2021-11-01</td><td>2016</td><td> 5</td></tr>
+	<tr><th scope=row>5</th><td>140</td><td> 36067</td><td>ALPHA</td><td>F</td><td>2015</td><td>Pomeranian                   </td><td>NA</td><td>10014</td><td>11/01/2016</td><td>2021-11-01</td><td>2017</td><td> 5</td></tr>
+	<tr><th scope=row>6</th><td>299</td><td>  8383</td><td>ALPHA</td><td>F</td><td>2015</td><td>Pomeranian                   </td><td>NA</td><td>10014</td><td>11/01/2016</td><td>2021-11-01</td><td>2018</td><td> 5</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+</div>
+</div>
+<div class="section" id="part-2-filter">
+<h2>Part 2 - Filter<a class="headerlink" href="#part-2-filter" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="exercise-3-old-chihuahuas">
+<h3>Exercise 3 - Old Chihuahuas<a class="headerlink" href="#exercise-3-old-chihuahuas" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>i) Filter the nyc_dogs data frame to consist only of dogs are at least 10 years old and whose breed is ‘Chihuahua’. Store the filtered data in a new dataframe called old_chihuahuas.</p></li>
+<li><p>ii) How many chihuahuas are there in the data set that are at least 10 years old?</p></li>
+<li><p>iii) What assumptions are underlying your answer? Is your number likely larger than, equal to, or smaller than the actual number.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># Strategy 1</span>
+<span class="n">old_chihuahuas</span> <span class="o">&lt;-</span> <span class="nf">filter</span><span class="p">(</span><span class="n">nyc_dogs</span><span class="p">,</span> <span class="n">Age</span> <span class="o">&gt;=</span><span class="m">10</span> <span class="o">&amp;</span> <span class="n">BreedName</span> <span class="o">==</span> <span class="s">&#39;Chihuahua&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># Strategy 2</span>
+<span class="n">old_chihuahuas</span> <span class="o">&lt;-</span> <span class="nf">filter</span><span class="p">(</span><span class="n">nyc_dogs</span><span class="p">,</span> <span class="n">BreedName</span> <span class="o">==</span> <span class="s">&#39;Chihuahua&#39;</span><span class="p">)</span>
+<span class="n">old_chihuahuas</span> <span class="o">&lt;-</span> <span class="nf">filter</span><span class="p">(</span><span class="n">old_chihuahuas</span><span class="p">,</span> <span class="n">Age</span> <span class="o">&gt;=</span><span class="m">10</span><span class="p">)</span>
+<span class="nf">head</span><span class="p">(</span><span class="n">old_chihuahuas</span><span class="p">,</span><span class="m">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table>
+<thead><tr><th scope=col>X</th><th scope=col>RowNumber</th><th scope=col>AnimalName</th><th scope=col>AnimalGender</th><th scope=col>AnimalBirthYear</th><th scope=col>BreedName</th><th scope=col>Borough</th><th scope=col>ZipCode</th><th scope=col>LicenseIssuedDate</th><th scope=col>LicenseExpiredDate</th><th scope=col>Extract.Year</th><th scope=col>Age</th></tr></thead>
+<tbody>
+	<tr><td>207       </td><td>80567     </td><td>BAILEY    </td><td>M         </td><td>2005      </td><td>Chihuahua </td><td>NA        </td><td>10013     </td><td>07/18/2017</td><td>2022-08-30</td><td>2017      </td><td>16        </td></tr>
+	<tr><td>364       </td><td>28136     </td><td>BAILEY    </td><td>M         </td><td>2005      </td><td>Chihuahua </td><td>NA        </td><td>10013     </td><td>07/18/2017</td><td>2022-08-30</td><td>2018      </td><td>16        </td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># ii) How many chihuahuas are there in the data set that are at least 10 years old?</span>
+<span class="c1"># Strategy 1</span>
+<span class="nf">str</span><span class="p">(</span><span class="n">old_chihuahuas</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;data.frame&#39;:	7 obs. of  12 variables:
+ $ X                 : int  207 364 467 446 231 389 430
+ $ RowNumber         : int  80567 28136 86817 80223 106922 41276 68946
+ $ AnimalName        : Factor w/ 250 levels &quot;ABBY&quot;,&quot;AEON&quot;,..: 11 11 37 40 204 204 229
+ $ AnimalGender      : Factor w/ 2 levels &quot;F&quot;,&quot;M&quot;: 2 2 2 2 2 2 2
+ $ AnimalBirthYear   : int  2005 2005 2006 2005 2009 2009 2011
+ $ BreedName         : Factor w/ 110 levels &quot;Airedale Terrier&quot;,..: 26 26 26 26 26 26 26
+ $ Borough           : logi  NA NA NA NA NA NA ...
+ $ ZipCode           : int  10013 10013 10014 10014 10014 10014 10012
+ $ LicenseIssuedDate : Factor w/ 237 levels &quot;01/01/2018&quot;,&quot;01/03/2017&quot;,..: 138 138 143 112 218 218 75
+ $ LicenseExpiredDate: Factor w/ 234 levels &quot;2021-02-12&quot;,&quot;2021-02-15&quot;,..: 149 149 114 144 158 158 185
+ $ Extract.Year      : int  2017 2018 2018 2018 2017 2018 2018
+ $ Age               : num  16 16 15 16 12 12 10
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># Strategy 2 </span>
+<span class="nf">dim</span><span class="p">(</span><span class="n">old_chihuahuas</span><span class="p">)[</span><span class="m">1</span><span class="p">]</span> <span class="c1"># [1] after dim() pulls out the first entry in the result, the number of rows.</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">7</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># Strategy 3</span>
+<span class="nf">length</span><span class="p">(</span><span class="n">old_chihuahuas</span><span class="o">$</span><span class="n">Age</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">7</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># Strategy 4</span>
+<span class="nf">nrow</span><span class="p">(</span><span class="n">old_chihuahuas</span><span class="p">)</span> <span class="c1"># nrow give the number of rows in the dataframe</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">7</div></div>
+</div>
+<p>There are 7 chihuahuas in the data set that are at least 10 years old.</p>
+<p>This is assuming that all of the dogs in the data set are alive today. It is also assuming that all dogs born in 2021 are 10 years old. Both of these assumption will lead to an output that is <strong>larger</strong> than the actual number.</p>
+</div>
+</div>
+<div class="section" id="part-3-group-and-summarize">
+<h2>Part 3 - Group and Summarize<a class="headerlink" href="#part-3-group-and-summarize" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="exercise-4-where-do-the-dogs-live">
+<h3>Exercise 4 - Where do the dogs live?<a class="headerlink" href="#exercise-4-where-do-the-dogs-live" title="Permalink to this headline">¶</a></h3>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">group_by()</span></code> and <code class="docutils literal notranslate"><span class="pre">summarize()</span></code> functions to answer the following questions. You can ignore the warning message about <code class="docutils literal notranslate"><span class="pre">summarise()</span></code> ungrouping output.</p>
+<ul class="simple">
+<li><p>How many of dogs in the nyc_dogs data set live in each zip code?</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1">### Dogs per zipcode</span>
+<span class="n">nyc_dogs</span> <span class="o">&lt;-</span> <span class="nf">ungroup</span><span class="p">(</span><span class="n">nyc_dogs</span><span class="p">)</span> <span class="c1"># Execute this command to remove any grouping that was applied in previous exercises.</span>
+<span class="n">nyc_dogs</span> <span class="o">&lt;-</span> <span class="nf">group_by</span><span class="p">(</span><span class="n">nyc_dogs</span><span class="p">,</span> <span class="n">ZipCode</span><span class="p">)</span>
+<span class="nf">head</span><span class="p">(</span><span class="nf">summarize</span><span class="p">(</span><span class="n">nyc_dogs</span><span class="p">,</span> <span class="n">Count</span><span class="o">=</span><span class="nf">n</span><span class="p">()))</span> <span class="c1"># n() says count</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table>
+<thead><tr><th scope=col>ZipCode</th><th scope=col>Count</th></tr></thead>
+<tbody>
+	<tr><td>10012</td><td>149  </td></tr>
+	<tr><td>10013</td><td>149  </td></tr>
+	<tr><td>10014</td><td>217  </td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+</div>
+<div class="section" id="excercise-5-average-age">
+<h3>Excercise 5 - Average age<a class="headerlink" href="#excercise-5-average-age" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Use the code in the cell below to remove all groupings from nyc_dogs</p></li>
+<li><p>Find the average of both the female dogs and the male dogs in the nyc_dogs data frame.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">nyc_dogs</span> <span class="o">&lt;-</span> <span class="nf">ungroup</span><span class="p">(</span><span class="n">nyc_dogs</span><span class="p">)</span> <span class="c1"># Execute this command to remove any grouping that was applied in previous exercises.</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">nyc_dogs</span> <span class="o">&lt;-</span> <span class="nf">group_by</span><span class="p">(</span><span class="n">nyc_dogs</span><span class="p">,</span> <span class="n">AnimalGender</span><span class="p">)</span>
+<span class="nf">summarize</span><span class="p">(</span><span class="n">nyc_dogs</span><span class="p">,</span> <span class="n">AvgAge</span> <span class="o">=</span> <span class="nf">mean</span><span class="p">(</span><span class="n">Age</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table>
+<thead><tr><th scope=col>AnimalGender</th><th scope=col>AvgAge</th></tr></thead>
+<tbody>
+	<tr><td>F       </td><td>6.473077</td></tr>
+	<tr><td>M       </td><td>7.270588</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+</div>
+<div class="section" id="exercise-6-popular-name">
+<h3>Exercise 6 - Popular name<a class="headerlink" href="#exercise-6-popular-name" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Find the most popular male dog name and the most popular female dog name in the nyc_dogs dataset.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">nyc_dogs</span> <span class="o">&lt;-</span> <span class="nf">ungroup</span><span class="p">(</span><span class="n">nyc_dogs</span><span class="p">)</span> <span class="c1"># Execute this command to remove any grouping that was applied in previous exercises.</span>
+<span class="n">nyc_dogs</span> <span class="o">&lt;-</span> <span class="nf">group_by</span><span class="p">(</span><span class="n">nyc_dogs</span><span class="p">,</span> <span class="n">AnimalName</span><span class="p">,</span> <span class="n">AnimalGender</span><span class="p">)</span>
+<span class="n">name_counts</span> <span class="o">&lt;-</span> <span class="nf">summarize</span><span class="p">(</span><span class="n">nyc_dogs</span><span class="p">,</span> <span class="n">Count</span> <span class="o">=</span> <span class="nf">n</span><span class="p">())</span>
+<span class="n">name_counts</span> <span class="o">&lt;-</span> <span class="nf">arrange</span><span class="p">(</span><span class="n">name_counts</span><span class="p">,</span> <span class="nf">desc</span><span class="p">(</span><span class="n">Count</span><span class="p">))</span>
+<span class="nf">head</span><span class="p">(</span><span class="n">name_counts</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table>
+<thead><tr><th scope=col>AnimalName</th><th scope=col>AnimalGender</th><th scope=col>Count</th></tr></thead>
+<tbody>
+	<tr><td>BANDIT</td><td>M     </td><td>8     </td></tr>
+	<tr><td>RUBY  </td><td>F     </td><td>7     </td></tr>
+	<tr><td>STELLA</td><td>F     </td><td>7     </td></tr>
+	<tr><td>GRETA </td><td>F     </td><td>6     </td></tr>
+	<tr><td>LOLA  </td><td>F     </td><td>6     </td></tr>
+	<tr><td>DAISY </td><td>F     </td><td>5     </td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<p>The most popular male dog name is Bandit and the most popular female dog name is Ruby.</p>
+</div>
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="example-1-sort-berkeley-data">
+<h3>Example 1 - sort berkeley data<a class="headerlink" href="#example-1-sort-berkeley-data" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">berkeley</span> <span class="o">&lt;-</span> <span class="nf">read.csv</span><span class="p">(</span><span class="s">&#39;~/shared/data/berkeley73.csv&#39;</span><span class="p">)</span>
+<span class="nf">arrange</span><span class="p">(</span><span class="n">berkeley</span><span class="p">,</span> <span class="nf">desc</span><span class="p">(</span><span class="n">Women_Admitted</span><span class="p">))</span>
+<span class="nf">rm</span><span class="p">(</span><span class="n">berkeley</span><span class="p">)</span> <span class="c1"># remove the variable so that it does just sit in memory.</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="n">Error</span> <span class="ow">in</span> <span class="n">arrange</span><span class="p">(</span><span class="n">berkeley</span><span class="p">,</span> <span class="n">desc</span><span class="p">(</span><span class="n">Women_Admitted</span><span class="p">)):</span> <span class="n">could</span> <span class="ow">not</span> <span class="n">find</span> <span class="n">function</span> <span class="s2">&quot;arrange&quot;</span>
+<span class="ne">Traceback</span>:
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="example-2-sort-weather-data">
+<h3>Example 2 - sort weather data<a class="headerlink" href="#example-2-sort-weather-data" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">NYCaugust</span> <span class="o">&lt;-</span> <span class="nf">read.csv</span><span class="p">(</span><span class="s">&#39;~/shared/data/NYC_Weather_August_2020.csv&#39;</span><span class="p">)</span>
+<span class="n">NYCaugust</span> <span class="o">&lt;-</span> <span class="nf">arrange</span><span class="p">(</span><span class="n">NYCaugust</span><span class="p">,</span> <span class="nf">desc</span><span class="p">(</span><span class="n">Temp_Max</span><span class="p">),</span><span class="n">Humidity_.Max</span><span class="p">)</span>
+<span class="nf">head</span><span class="p">(</span><span class="n">NYCaugust</span><span class="p">)</span>
+<span class="nf">rm</span><span class="p">(</span><span class="n">NYCaugust</span><span class="p">)</span>  <span class="c1"># remove the variable so that it does just sit in memory.</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="example-3-group-and-summarize-weather-data">
+<h3>Example 3 - group and summarize weather data<a class="headerlink" href="#example-3-group-and-summarize-weather-data" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="s">&#39;dplyr&#39;</span><span class="p">)</span>
+<span class="n">NYCaugust</span> <span class="o">&lt;-</span> <span class="nf">read.csv</span><span class="p">(</span><span class="s">&#39;~/shared/data/NYC_Weather_August_2020.csv&#39;</span><span class="p">)</span>
+<span class="n">NYCaugust</span> <span class="o">&lt;-</span> <span class="nf">group_by</span><span class="p">(</span><span class="n">NYCaugust</span><span class="p">,</span> <span class="n">Wind_Min</span><span class="p">)</span>
+<span class="nf">head</span><span class="p">(</span><span class="nf">summarize</span><span class="p">(</span><span class="n">NYCaugust</span><span class="p">,</span> <span class="n">Avg_Wind_Max</span> <span class="o">=</span> <span class="nf">mean</span><span class="p">(</span><span class="n">Wind_Max</span><span class="p">)))</span>
+<span class="c1">#rm(NYCaugust)  # remove the variable so that it does just sit in memory.</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="example-4-longest-lived-breed">
+<h3>Example 4 - Longest lived breed<a class="headerlink" href="#example-4-longest-lived-breed" title="Permalink to this headline">¶</a></h3>
+<p>Based on the data in nyc_dogs determine what breed has the longest lifespan.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">head</span><span class="p">(</span><span class="nf">arrange</span><span class="p">(</span><span class="n">nyc_dogs</span><span class="p">,</span> <span class="nf">desc</span><span class="p">(</span><span class="n">Age</span><span class="p">)))</span> <span class="c1"># Look at the data so that we know what to expect</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table>
+<caption>A grouped_df: 6 × 12</caption>
+<thead>
+	<tr><th scope=col>X</th><th scope=col>RowNumber</th><th scope=col>AnimalName</th><th scope=col>AnimalGender</th><th scope=col>AnimalBirthYear</th><th scope=col>BreedName</th><th scope=col>Borough</th><th scope=col>ZipCode</th><th scope=col>LicenseIssuedDate</th><th scope=col>LicenseExpiredDate</th><th scope=col>Extract.Year</th><th scope=col>Age</th></tr>
+	<tr><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;lgl&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>418</td><td>63866</td><td>AEON </td><td>F</td><td>2002</td><td>Labrador Retriever Crossbreed</td><td>NA</td><td>10012</td><td>04/03/2018</td><td>2021-04-03</td><td>2018</td><td>18</td></tr>
+	<tr><td>422</td><td>65005</td><td>SCOUT</td><td>M</td><td>2003</td><td>Cavalier King Charles Spaniel</td><td>NA</td><td>10013</td><td>04/09/2018</td><td>2023-04-09</td><td>2018</td><td>17</td></tr>
+	<tr><td> 23</td><td>64970</td><td>BOZ  </td><td>M</td><td>2004</td><td>Labradoodle                  </td><td>NA</td><td>10014</td><td>05/19/2016</td><td>2021-05-19</td><td>2016</td><td>16</td></tr>
+	<tr><td> 29</td><td>72188</td><td>LOLA </td><td>F</td><td>2004</td><td>Labrador Retriever           </td><td>NA</td><td>10013</td><td>06/19/2016</td><td>2021-06-19</td><td>2016</td><td>16</td></tr>
+	<tr><td> 99</td><td>18491</td><td>BOZ  </td><td>M</td><td>2004</td><td>Labradoodle                  </td><td>NA</td><td>10014</td><td>05/19/2016</td><td>2021-05-19</td><td>2017</td><td>16</td></tr>
+	<tr><td>105</td><td>21371</td><td>LOLA </td><td>F</td><td>2004</td><td>Labrador Retriever           </td><td>NA</td><td>10013</td><td>06/19/2016</td><td>2021-06-19</td><td>2017</td><td>16</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">nyc_dogs</span> <span class="o">&lt;-</span> <span class="nf">ungroup</span><span class="p">(</span><span class="n">nyc_dogs</span><span class="p">)</span> <span class="c1"># Execute this command to remove any grouping that was applied in previous exercises.</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># Strategy 1: summarize and sort</span>
+<span class="n">nyc_dogs</span> <span class="o">&lt;-</span> <span class="nf">group_by</span><span class="p">(</span><span class="n">nyc_dogs</span><span class="p">,</span> <span class="n">BreedName</span><span class="p">)</span>
+<span class="n">breed_age</span> <span class="o">&lt;-</span> <span class="nf">summarize</span><span class="p">(</span><span class="n">nyc_dogs</span><span class="p">,</span> <span class="n">Max_Age</span> <span class="o">=</span> <span class="nf">max</span><span class="p">(</span><span class="n">Age</span><span class="p">))</span>
+<span class="n">breed_age</span> <span class="o">&lt;-</span> <span class="nf">arrange</span><span class="p">(</span><span class="n">breed_age</span><span class="p">,</span> <span class="nf">desc</span><span class="p">(</span><span class="n">Max_Age</span><span class="p">))</span>
+<span class="nf">head</span><span class="p">(</span><span class="n">breed_age</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>`summarise()` ungrouping output (override with `.groups` argument)
+</pre></div>
+</div>
+<div class="output text_html"><table>
+<caption>A tibble: 6 × 2</caption>
+<thead>
+	<tr><th scope=col>BreedName</th><th scope=col>Max_Age</th></tr>
+	<tr><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>Labrador Retriever Crossbreed</td><td>18</td></tr>
+	<tr><td>Cavalier King Charles Spaniel</td><td>17</td></tr>
+	<tr><td>Beagle Crossbreed            </td><td>16</td></tr>
+	<tr><td>Labradoodle                  </td><td>16</td></tr>
+	<tr><td>Labrador Retriever           </td><td>16</td></tr>
+	<tr><td>Chihuahua                    </td><td>15</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<p>We conclude that Labrador Retriever Crossbreed	is the longest lived of the breeds, because they can reach the maximum age of 18 years old.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># Strategy 2: Find max age then filster, summarize and sort</span>
+<span class="n">max_age</span> <span class="o">&lt;-</span> <span class="nf">max</span><span class="p">(</span><span class="n">nyc_dogs</span><span class="o">$</span><span class="n">Age</span><span class="p">)</span>
+<span class="n">max_age</span>
+
+<span class="n">old_dogs</span> <span class="o">&lt;-</span> <span class="nf">filter</span><span class="p">(</span><span class="n">nyc_dogs</span><span class="p">,</span> <span class="n">Age</span> <span class="o">==</span> <span class="n">max_age</span><span class="p">)</span>
+<span class="n">old_dogs</span> <span class="o">&lt;-</span> <span class="nf">group_by</span><span class="p">(</span><span class="n">old_dogs</span><span class="p">,</span> <span class="n">BreedName</span><span class="p">)</span>
+<span class="n">old_breeds</span> <span class="o">&lt;-</span> <span class="nf">summarize</span><span class="p">(</span><span class="n">old_dogs</span><span class="p">,</span> <span class="n">Count</span> <span class="o">=</span> <span class="nf">n</span><span class="p">())</span>
+<span class="n">old_breeds</span> <span class="o">&lt;-</span> <span class="nf">arrange</span><span class="p">(</span><span class="n">old_breeds</span><span class="p">,</span> <span class="nf">desc</span><span class="p">(</span><span class="n">Count</span><span class="p">))</span>
+<span class="n">old_breeds</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">18</div><div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>`summarise()` ungrouping output (override with `.groups` argument)
+</pre></div>
+</div>
+<div class="output text_html"><table>
+<caption>A tibble: 1 × 2</caption>
+<thead>
+	<tr><th scope=col>BreedName</th><th scope=col>Count</th></tr>
+	<tr><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;int&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>Labrador Retriever Crossbreed</td><td>1</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<p>We conclude that Labrador Retriever Crossbreed	is the longest lived of the breeds, because they can reach the maximum age of 18 years old.</p>
+<p>It would be more accurage to look at the dogs who get old (say at least 10 years) rather than just those that reach the max age.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">nyc_dogs</span> <span class="o">&lt;-</span> <span class="nf">ungroup</span><span class="p">(</span><span class="n">nyc_dogs</span><span class="p">)</span> <span class="c1"># Execute this command to remove any grouping that was applied in previous exercises.</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># Strategy 3 Highest percentage of old dogs, in knowns breeds with at least 100 representatives</span>
+<span class="n">nyc_dogs</span> <span class="o">&lt;-</span> <span class="nf">mutate</span><span class="p">(</span><span class="n">nyc_dogs</span><span class="p">,</span> <span class="n">is_old</span> <span class="o">=</span> <span class="n">Age</span> <span class="o">&gt;=</span><span class="m">10</span><span class="p">)</span>
+<span class="n">nyc_dogs</span> <span class="o">&lt;-</span> <span class="nf">group_by</span><span class="p">(</span><span class="n">nyc_dogs</span><span class="p">,</span> <span class="n">BreedName</span><span class="p">)</span>
+<span class="n">breed_counts</span> <span class="o">&lt;-</span> <span class="nf">summarize</span><span class="p">(</span><span class="n">nyc_dogs</span><span class="p">,</span> <span class="n">Num_Old</span> <span class="o">=</span> <span class="nf">sum</span><span class="p">(</span><span class="n">is_old</span><span class="p">),</span> <span class="n">Total</span> <span class="o">=</span> <span class="nf">n</span><span class="p">())</span>
+<span class="n">breed_counts</span> <span class="o">&lt;-</span> <span class="nf">mutate</span><span class="p">(</span><span class="n">breed_counts</span><span class="p">,</span> <span class="n">Perc_Old</span> <span class="o">=</span> <span class="n">Num_Old</span> <span class="o">/</span> <span class="n">Total</span> <span class="o">*</span> <span class="m">100</span><span class="p">)</span>
+<span class="n">breed_counts</span> <span class="o">&lt;-</span> <span class="nf">arrange</span><span class="p">(</span><span class="n">breed_counts</span><span class="p">,</span><span class="nf">desc</span><span class="p">(</span><span class="n">Total</span><span class="p">),</span> <span class="nf">desc</span><span class="p">(</span><span class="n">Perc_Old</span><span class="p">))</span>
+<span class="nf">head</span><span class="p">(</span><span class="n">breed_counts</span><span class="p">,</span><span class="m">12</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>`summarise()` ungrouping output (override with `.groups` argument)
+</pre></div>
+</div>
+<div class="output text_html"><table>
+<caption>A tibble: 12 × 4</caption>
+<thead>
+	<tr><th scope=col>BreedName</th><th scope=col>Num_Old</th><th scope=col>Total</th><th scope=col>Perc_Old</th></tr>
+	<tr><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>Labrador Retriever           </td><td>17</td><td>34</td><td>50.000000</td></tr>
+	<tr><td>Shih Tzu                     </td><td> 2</td><td>20</td><td>10.000000</td></tr>
+	<tr><td>Labrador Retriever Crossbreed</td><td> 4</td><td>18</td><td>22.222222</td></tr>
+	<tr><td>Labradoodle                  </td><td> 3</td><td>18</td><td>16.666667</td></tr>
+	<tr><td>Chihuahua                    </td><td> 6</td><td>16</td><td>37.500000</td></tr>
+	<tr><td>Yorkshire Terrier            </td><td> 6</td><td>14</td><td>42.857143</td></tr>
+	<tr><td>French Bulldog               </td><td> 0</td><td>14</td><td> 0.000000</td></tr>
+	<tr><td>Poodle Crossbreed            </td><td> 0</td><td>14</td><td> 0.000000</td></tr>
+	<tr><td>Havanese                     </td><td> 2</td><td>13</td><td>15.384615</td></tr>
+	<tr><td>Goldendoodle                 </td><td> 0</td><td>13</td><td> 0.000000</td></tr>
+	<tr><td>Maltese                      </td><td> 1</td><td>12</td><td> 8.333333</td></tr>
+	<tr><td>Shih Tzu Crossbreed          </td><td> 2</td><td>11</td><td>18.181818</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<p>We conclude that Labrador Retriever is most likely to live at least ten years.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "r"
+        },
+        kernelOptions: {
+            kernelName: "ir",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'ir'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="lesson04_solutions.html" title="previous page">Lesson 4 Solutions</a>
+    <a class='right-next' id="next-link" href="lesson06_solutions.html" title="next page">Lesson 06 -  Data Visualization</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Corrin Clarkson<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>

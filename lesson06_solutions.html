@@ -46,6 +46,8 @@
     <script src="_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -55,7 +57,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Other References" href="outside_sources.html" />
+    <link rel="prev" title="Lesson 5 - Solutions" href="lesson05_solutions.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -108,6 +110,26 @@
  </span>
 </p>
 <ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="lesson02_solutions.html">
+   Lesson 2: Solutions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lesson03_solutions.html">
+   Lesson 3 Working with Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lesson04_solutions.html">
+   Lesson 4 Solutions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lesson05_solutions.html">
+   Lesson 5 -  Solutions
+  </a>
+ </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Lesson 06 -  Data Visualization
@@ -201,23 +223,6 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#useful-links">
-   Useful links
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#class-notes">
-     Class notes
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#poll-everywhere">
-     Poll Everywhere
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exercises">
    Exercises
   </a>
@@ -277,20 +282,6 @@
                 
   <div class="section" id="lesson-06-data-visualization">
 <h1>Lesson 06 -  Data Visualization<a class="headerlink" href="#lesson-06-data-visualization" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="useful-links">
-<h2>Useful links<a class="headerlink" href="#useful-links" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="class-notes">
-<h3>Class notes<a class="headerlink" href="#class-notes" title="Permalink to this headline">¶</a></h3>
-<p>Link on NYU Classes or<br>
-Tiny URL: https://tinyurl.com/y3jj9g6w</p>
-</div>
-<div class="section" id="poll-everywhere">
-<h3>Poll Everywhere<a class="headerlink" href="#poll-everywhere" title="Permalink to this headline">¶</a></h3>
-<p>The following links are also on NYU Classes<br>
-Login: https://www.polleverywhere.com/auth/saml/nyu_main<br>
-Respond: https://pollev.com/clarkson<br></p>
-</div>
-</div>
 <div class="section" id="exercises">
 <h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h2>
 <p>These exercises are to help you check your understanding during class. They will not be collected.</p>
@@ -314,27 +305,20 @@ Respond: https://pollev.com/clarkson<br></p>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="s">&#39;dplyr&#39;</span><span class="p">)</span> <span class="c1"># load the dplyr package</span>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import the dog licence data</span>
 <span class="n">nyc_trees</span> <span class="o">&lt;-</span> <span class="nf">read.csv</span><span class="p">(</span> <span class="s">&#39;~/shared/data/NYC_Tree_Census_small.csv&#39;</span> <span class="p">)</span> <span class="c1"># import the data</span>
+
+<span class="c1"># load the dplyr package.</span>
+<span class="c1"># The warn.conflicts=FALSE option supressess the warning about objects are masked from other libraries.</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">dplyr</span><span class="p">,</span> <span class="n">warn.conflicts</span><span class="o">=</span><span class="kc">FALSE</span><span class="p">)</span> 
+
+<span class="c1"># </span>
 <span class="n">nyc_trees</span> <span class="o">&lt;-</span> <span class="nf">group_by</span><span class="p">(</span><span class="n">nyc_trees</span><span class="p">,</span> <span class="n">health</span><span class="p">)</span>
 <span class="nf">summarize</span><span class="p">(</span><span class="n">nyc_trees</span><span class="p">,</span> <span class="n">Count</span> <span class="o">=</span> <span class="nf">n</span><span class="p">())</span> 
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Attaching package: ‘dplyr’
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The following objects are masked from ‘package:stats’:
-
-    filter, lag
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The following objects are masked from ‘package:base’:
-
-    intersect, setdiff, setequal, union
-</pre></div>
-</div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Warning message in file(file, &quot;rt&quot;):
 “cannot open file &#39;/home/clarkson/shared/data/NYC_Tree_Census_small.csv&#39;: No such file or directory”
 </pre></div>
@@ -360,16 +344,7 @@ Respond: https://pollev.com/clarkson<br></p>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="s">&#39;ggplot2&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Registered S3 methods overwritten by &#39;ggplot2&#39;:
-  method         from 
-  [.quosures     rlang
-  c.quosures     rlang
-  print.quosures rlang
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -419,7 +394,7 @@ Respond: https://pollev.com/clarkson<br></p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/lesson06_solutions_14_0.png" src="_images/lesson06_solutions_14_0.png" />
+<img alt="_images/lesson06_solutions_13_0.png" src="_images/lesson06_solutions_13_0.png" />
 </div>
 </div>
 </div>
@@ -498,7 +473,7 @@ Respond: https://pollev.com/clarkson<br></p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/lesson06_solutions_17_0.png" src="_images/lesson06_solutions_17_0.png" />
+<img alt="_images/lesson06_solutions_16_0.png" src="_images/lesson06_solutions_16_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -508,7 +483,7 @@ Respond: https://pollev.com/clarkson<br></p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/lesson06_solutions_18_0.png" src="_images/lesson06_solutions_18_0.png" />
+<img alt="_images/lesson06_solutions_17_0.png" src="_images/lesson06_solutions_17_0.png" />
 </div>
 </div>
 </div>
@@ -533,7 +508,7 @@ Respond: https://pollev.com/clarkson<br></p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/lesson06_solutions_21_0.png" src="_images/lesson06_solutions_21_0.png" />
+<img alt="_images/lesson06_solutions_20_0.png" src="_images/lesson06_solutions_20_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -543,7 +518,7 @@ Respond: https://pollev.com/clarkson<br></p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/lesson06_solutions_22_0.png" src="_images/lesson06_solutions_22_0.png" />
+<img alt="_images/lesson06_solutions_21_0.png" src="_images/lesson06_solutions_21_0.png" />
 </div>
 </div>
 </div>
@@ -564,7 +539,7 @@ Respond: https://pollev.com/clarkson<br></p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/lesson06_solutions_25_0.png" src="_images/lesson06_solutions_25_0.png" />
+<img alt="_images/lesson06_solutions_24_0.png" src="_images/lesson06_solutions_24_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -574,7 +549,7 @@ Respond: https://pollev.com/clarkson<br></p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/lesson06_solutions_26_0.png" src="_images/lesson06_solutions_26_0.png" />
+<img alt="_images/lesson06_solutions_25_0.png" src="_images/lesson06_solutions_25_0.png" />
 </div>
 </div>
 </div>
@@ -657,7 +632,7 @@ Respond: https://pollev.com/clarkson<br></p>
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="outside_sources.html" title="previous page">Other References</a>
+    <a class='left-prev' id="prev-link" href="lesson05_solutions.html" title="previous page">Lesson 5 -  Solutions</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
