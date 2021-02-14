@@ -7,12 +7,12 @@
 - file: landing_page
     
 # Chapters in this part will not be numbered
-- part: references
+- part: References
   chapters:
 #  - file: r_commands
   - file: outside_sources
   
-#- part: exercises
-#   chapters:
-# #    - file: lesson06
-#     - files: lesson06_solutions 
+- part: Exercises
+  chapters:
+#    - file: lesson06
+  - file: lesson06_solutions
