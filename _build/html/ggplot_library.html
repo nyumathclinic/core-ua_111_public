@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>From Data to Discovery &#8212; From Data to Discovery</title>
+    <title>dplyr Library &#8212; From Data to Discovery</title>
     
   <link rel="stylesheet" href="_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -57,7 +57,6 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Base R" href="base_r.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -86,8 +85,8 @@
 </form>
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <ul class="nav sidenav_l1">
- <li class="toctree-l1 current active">
-  <a class="reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="landing_page.html">
    From Data to Discovery
   </a>
  </li>
@@ -185,9 +184,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/landing_page.md"><button type="button"
+        <a class="dropdown-buttons" href="_sources/ggplot_library.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -205,6 +204,23 @@
 
         <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/ggplot_library.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
     </div>
 
     <!-- Table of contents -->
@@ -215,12 +231,37 @@
         </div>
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#spring-2021-core-ua-111">
-   Spring 2021 CORE-UA 111
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   dplyr Library
   </a>
   <ul class="nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mutate">
+     mutate
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#arange">
+     arange
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#filter">
+     filter
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#group-by-and-summarize">
+     group_by and summarize
+    </a>
+   </li>
   </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ggplot-library">
+   ggplot Library
+  </a>
  </li>
 </ul>
 
@@ -233,16 +274,85 @@
         
               <div>
                 
-  <div class="section" id="from-data-to-discovery">
-<h1>From Data to Discovery<a class="headerlink" href="#from-data-to-discovery" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="spring-2021-core-ua-111">
-<h2>Spring 2021 CORE-UA 111<a class="headerlink" href="#spring-2021-core-ua-111" title="Permalink to this headline">¶</a></h2>
-<p>This site is intended to serve as reference for students enrolled in the Spring 2021 New York Univeristy quantitave reasoning course CORE-US 111 From Data to Discovery taught by Prof. Corrin Clarkson.</p>
-<div class="toctree-wrapper compound">
+  <div class="admonition warning" name="html-admonition">
+<div class="title" style="background: pink; padding: 10px">Warning</div>
+    <p>Juxtiposiition does <b>not</b> work for multiplication. The code <code>5(2)</code> will reult in the following error. </p>
+    <quote>Error in eval(expr, envir, enclos): attempt to apply non-function</quote>
+</div><p><code class="docutils literal notranslate"><span class="pre">/</span></code> forward slash divides numbers.</p>
+<div class="admonition note" name="html-admonition">
+<div class="title" style="background: lightblue; padding: 10px">Note</div>
+<p>R uses the standard order of operations when evaluating arithmetic expressions.</p>
+</div><p><code class="docutils literal notranslate"><span class="pre">^</span></code> caret and <code class="docutils literal notranslate"><span class="pre">**</span></code> two astricks both raise numbers two powers.</p>
+<div class="admonition tip" name="html-admonition" >
+<div class="title" style="background: lightyellow; padding: 10px">Style Tip</div>
+<p>You  can decide which method of imputting exponents you prefer, but for the sake of clarity you should only use one method in a give notebook. </p>
+</div><div class="section" id="dplyr-library">
+<h1>dplyr Library<a class="headerlink" href="#dplyr-library" title="Permalink to this headline">¶</a></h1>
+<p>The dplyr library is part of a family of R packages called the <a class="reference external" href="https://www.tidyverse.org/">tidyverse</a>.</p>
+<p>See the <a class="reference external" href="https://r4ds.had.co.nz/transform.html">Data Transformations</a> chapter of <em>R for Data Science</em> for more explanation.</p>
+<p><a class="reference external" href="https://www.rdocumentation.org/packages/dplyr">R documentation page for dplyr</a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># You can ignore the warning about objects from other libraries being masked.</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">dplyr</span><span class="p">)</span>
+</pre></div>
 </div>
-<div class="toctree-wrapper compound">
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Attaching package: ‘dplyr’
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The following objects are masked from ‘package:stats’:
+
+    filter, lag
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+</pre></div>
 </div>
 </div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># The warn.conflicts=FALSE option supressess the warning about objects from other libraries being masked.</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">dplyr</span><span class="p">,</span> <span class="n">warn.conflicts</span><span class="o">=</span><span class="kc">FALSE</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="n">Error</span> <span class="ow">in</span> <span class="n">parse</span><span class="p">(</span><span class="n">text</span> <span class="o">=</span> <span class="n">x</span><span class="p">,</span> <span class="n">srcfile</span> <span class="o">=</span> <span class="n">src</span><span class="p">):</span> <span class="o">&lt;</span><span class="n">text</span><span class="o">&gt;</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="mi">38</span><span class="p">:</span> <span class="n">unexpected</span> <span class="s1">&#39;)&#39;</span>
+<span class="mi">1</span><span class="p">:</span> <span class="c1"># The warn.conflicts=FALSE option supressess the warning about objects from other libraries being masked.</span>
+<span class="mi">2</span><span class="p">:</span> <span class="n">library</span><span class="p">(</span><span class="n">dplyr</span><span class="p">,</span> <span class="n">warn</span><span class="o">.</span><span class="n">conflicts</span><span class="o">=</span><span class="n">FALSE</span><span class="p">)</span> <span class="p">)</span>
+                                        <span class="o">^</span>
+<span class="ne">Traceback</span>:
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition note" name="html-admonition">
+<div class="title" style="background: lightblue; padding: 10px">Note</div>
+<p>If you try to execute a dplyr function pefore loading the library, you will get an error messages stating that R could not find the function.</p>
+</div><div class="section" id="mutate">
+<h2>mutate<a class="headerlink" href="#mutate" title="Permalink to this headline">¶</a></h2>
+<div class="admonition warning" name="html-admonition">
+<div class="title" style="background: pink; padding: 10px">Warning</div>
+    <p>If you want to keep the updated dataframe that you produced with a dplyr function, then you must <b>store the output in a variable</b>.</p>
+    <code>VARIABLE  &#60;- mutate(DATAFRAME, NEW_COLUMN = FORMULA)</code>
+</div></div>
+<div class="section" id="arange">
+<h2>arange<a class="headerlink" href="#arange" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="filter">
+<h2>filter<a class="headerlink" href="#filter" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="group-by-and-summarize">
+<h2>group_by and summarize<a class="headerlink" href="#group-by-and-summarize" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+<div class="section" id="ggplot-library">
+<h1>ggplot Library<a class="headerlink" href="#ggplot-library" title="Permalink to this headline">¶</a></h1>
 </div>
 
     <script type="text/x-thebe-config">
@@ -254,16 +364,16 @@
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "python"
+            mode: "r"
         },
         kernelOptions: {
-            kernelName: "python3",
+            kernelName: "ir",
             path: "./."
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'python3'</script>
+    <script>kernelName = 'ir'</script>
 
               </div>
               
@@ -273,7 +383,6 @@
     
     <div class='prev-next-bottom'>
         
-    <a class='right-next' id="next-link" href="base_r.html" title="next page">Base R</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
