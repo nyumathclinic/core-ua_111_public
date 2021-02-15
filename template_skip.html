@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>From Data to Discovery &#8212; From Data to Discovery</title>
+    <title>Title &#8212; From Data to Discovery</title>
     
   <link rel="stylesheet" href="_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -57,7 +57,6 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Base R" href="base_r.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -86,8 +85,8 @@
 </form>
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <ul class="nav sidenav_l1">
- <li class="toctree-l1 current active">
-  <a class="reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="landing_page.html">
    From Data to Discovery
   </a>
  </li>
@@ -185,9 +184,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/landing_page.md"><button type="button"
+        <a class="dropdown-buttons" href="_sources/template_skip.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -205,26 +204,27 @@
 
         <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/template_skip.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
     </div>
 
     <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
-        
-        <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i> Contents
-        </div>
-        <nav id="bd-toc-nav">
-            <ul class="nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#spring-2021-core-ua-111">
-   Spring 2021 CORE-UA 111
-  </a>
-  <ul class="nav section-nav flex-column">
-  </ul>
- </li>
-</ul>
-
-        </nav>
         
     </div>
 </div>
@@ -233,17 +233,19 @@
         
               <div>
                 
-  <div class="section" id="from-data-to-discovery">
-<h1>From Data to Discovery<a class="headerlink" href="#from-data-to-discovery" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="spring-2021-core-ua-111">
-<h2>Spring 2021 CORE-UA 111<a class="headerlink" href="#spring-2021-core-ua-111" title="Permalink to this headline">¶</a></h2>
-<p>This site is intended to serve as reference for students enrolled in the Spring 2021 New York Univeristy quantitave reasoning course CORE-US 111 From Data to Discovery taught by Prof. Corrin Clarkson.</p>
-<div class="toctree-wrapper compound">
-</div>
-<div class="toctree-wrapper compound">
-</div>
-</div>
-</div>
+  <div class="section" id="title">
+<h1>Title<a class="headerlink" href="#title" title="Permalink to this headline">¶</a></h1>
+<div class="admonition warning" name="html-admonition">
+<div class="title" style="background: pink; padding: 10px">Warning</div>
+    <p>Juxtiposiition does <b>not</b> work for multiplication. The code <code>5(2)</code> will reult in the following error. </p>
+    <quote>Error in eval(expr, envir, enclos): attempt to apply non-function</quote>
+</div><div class="admonition note" name="html-admonition">
+<div class="title" style="background: lightblue; padding: 10px">Note</div>
+<p>R uses the standard order of operations when evaluating arithmetic expressions.</p>
+</div><div class="admonition tip" name="html-admonition" >
+<div class="title" style="background: lightyellow; padding: 10px">Style Tip</div>
+<p>You  can decide which method of imputting exponents you prefer, but for the sake of clarity you should only use one method in a give notebook. </p>
+</div></div>
 
     <script type="text/x-thebe-config">
     {
@@ -254,16 +256,16 @@
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "python"
+            mode: "r"
         },
         kernelOptions: {
-            kernelName: "python3",
+            kernelName: "ir",
             path: "./."
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'python3'</script>
+    <script>kernelName = 'ir'</script>
 
               </div>
               
@@ -273,7 +275,6 @@
     
     <div class='prev-next-bottom'>
         
-    <a class='right-next' id="next-link" href="base_r.html" title="next page">Base R</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
