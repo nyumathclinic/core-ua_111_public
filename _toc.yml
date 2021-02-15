@@ -9,7 +9,9 @@
 # Chapters in this part will not be numbered
 - part: References
   chapters:
-  - file: r_commands
+  - file: base_r
+  - file: dplyr_library
+#  - file: ggplot_library  
   - file: outside_sources
   
 - part: Exercises
